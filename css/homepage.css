@@ -1,22 +1,22 @@
 .welcome {
   font-size: 40px;
-  font-family: monospace;
-  font-weight: normal;
   margin-top: 30px;
 }
 
 .wrapper {
-  margin: 50px 0 100px 0;
+  margin: 50px 40% 100px 0;
+  font-size: 24px;
+  line-height: 1.6;
 }
 
 .typing {
-  width: 26ch;
-  animation: typing 3.5s steps(26), blink 0.5s step-end infinite alternate;
+  width: 21.8ch;
+  animation: typing 3.5s steps(24), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-size: 21px;
-  font-family: monospace;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 @keyframes typing {
