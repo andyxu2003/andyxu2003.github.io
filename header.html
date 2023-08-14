@@ -1,0 +1,40 @@
+<!-- header.html -->
+<html>
+<head>
+  <title>Andy Xu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style></style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title">
+      <a href="/" class="home">Andy Xu</a>
+    </h1>
+    <div class="links">
+      <a href="photography.html" class="hover">photography</a>
+      <a href="resume.html" class="hover">resume</a>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // Get the filename of the current page without the leading "/"
+      var currentPage = window.location.pathname.split('/').pop();
+      if (currentPage === "") {
+        currentPage = "index.html"; // Set the homepage's filename
+      }
+
+      // Loop through each link in the header and check if its filename matches the current page
+      $('.links a').each(function() {
+        var linkPage = this.href.split('/').pop();
+
+        if (linkPage === currentPage) {
+          $(this).addClass('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

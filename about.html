@@ -1,0 +1,25 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Use jQuery's load() function to fetch and insert the header content
+        $("#header-container").load("header.html");
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Include the header.html content -->
+    <div id="header-container">
+      <!-- The header content will be dynamically added here with the "active" class applied to the current page's link -->
+    </div>
+
+    <!-- Your page content goes here -->
+    <h1>About Us</h1>
+    <p>This is the about page content.</p>
+  </body>
+</html>

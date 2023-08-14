@@ -7,26 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
   <body>
-    <header>
-      <h1 class="title">Andy Xu</h1>
-      <div class="links">
-        <a href="/" class="header_border">Home</a>
-        <a href="portfolio.html" class="hover">Portfolio</a>
-        <a href="photography.html" class="hover">Photography</a>
-        <a href="resume.html" class="hover">Resume</a>
-        <a href="contact.html" class="hover">Contact</a>
-      </div>
-    </header>
+    <div id="header"></div>
 
-    <div class="container">
-      <div class="welcome">🤠 Hi! I'm Andy,</div>
-      <div class="wrapper">
-        <div class="typing">and welcome to my website!</div> <br>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae, accusamus at sed quas quo! Fuga quasi magnam, aliquam facilis eveniet, molestias inventore consequuntur iure molestiae provident, deleniti perspiciatis saepe.
-        </div>
-      </div>
+    <div class="welcome-container">
+      Hi, I'm Andy, <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae,
+      accusamus at sed quas quo! Fuga quasi magnam
     </div>
   </body>
 </html>
