@@ -94,15 +94,14 @@
 
 @media (max-width: 768px) {
   .intro-container {
-    width: 90%;
+    width: 80%;
     height: auto;
-    max-height: 50vh;
+    max-height: 40vh;
   }
 
   .intro-text {
-    width: 100%;
-    padding: 5vh;
-    font-size: 18px;
+    max-width: 80%;
+    font-size: 16px;
   }
 
   .arrow-container {
