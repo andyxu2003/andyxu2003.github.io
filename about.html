@@ -1,25 +1,73 @@
-<!-- about.html -->
-<!DOCTYPE html>
+<link rel="stylesheet" href="./css/about.css" />
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+
 <html>
   <head>
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Use jQuery's load() function to fetch and insert the header content
-        $("#header-container").load("header.html");
-      });
-    </script>
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInDiv = document.getElementById("self");
+      fadeInDiv.classList.add("fade-in");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select the div element
+      const divToFadeIn = document.getElementById("about-text");
+
+      // Set a timeout to fade in the div after 1 seconds
+      setTimeout(function () {
+        divToFadeIn.style.opacity = "1";
+      }, 1000); //
+    });
+  </script>
   <body>
-    <!-- Include the header.html content -->
-    <div id="header-container">
-      <!-- The header content will be dynamically added here with the "active" class applied to the current page's link -->
+    <div class="header">
+      <h1 class="title">
+        <a href="/" class="home">Andy Xu</a>
+      </h1>
+      <div class="links">
+        <a href="about" class="underline">about</a>
+        <a
+          href="https://drive.google.com/file/d/1flQ9OKhiL2U2P9s2anUPv7fbazL4g0fb/view?usp=sharing"
+          class="hover"
+          target="_blank"
+          >resume</a
+        >
+      </div>
     </div>
 
-    <!-- Your page content goes here -->
-    <h1>About Us</h1>
-    <p>This is the about page content.</p>
+    <img src="images/self-photo.png" class="self" id="self" />
+    <div class="about-text" id="about-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare
+      quam. Libero justo laoreet sit amet cursus sit amet dictum. Faucibus in
+      ornare quam viverra orci sagittis eu. Lectus nulla at volutpat diam ut
+      venenatis tellus in metus. Ultrices vitae auctor eu augue ut lectus arcu
+      bibendum. Mauris commodo quis imperdiet massa tincidunt nunc. Sed arcu non
+      odio euismod lacinia at. Ipsum nunc aliquet bibendum enim facilisis
+      gravida neque convallis a. Tincidunt praesent semper feugiat nibh. Eu
+      tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Risus
+      viverra adipiscing at in tellus. Dictum varius duis at consectetur. Donec
+      adipiscing tristique risus nec. Purus sit amet luctus venenatis lectus.
+    </div>
+
+    <div class="footer-container">
+      <footer>
+        <div class="designed">designed by Andy Xu</div>
+        <div class="contact">
+          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
+          <a href="https://www.linkedin.com/in/andyxu2003/" target="_blank"
+            >LinkedIn^</a
+          >
+          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
+            >photography^</a
+          >
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

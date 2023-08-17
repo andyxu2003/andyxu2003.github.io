@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Courier+Prime");
+
+body {
+    background-color: #FFF4EA;
+}
+
+.self {
+    margin: auto;
+    display: block;
+    width: 462px;
+    height: 420px;
+    margin-top: 4%;
+}
+
+.about-text {
+    width: 750px;
+    margin: auto;
+    margin-top: 4%;
+    font-family: "Courier Prime", serif !important;
+    line-height: 1.7;
+    font-size: 18px;
+    padding-bottom: 6%;
+    opacity: 0; /* Start with an invisible div */
+    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+}
+
+@keyframes bounceFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-10px); /* Bounce up */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: bounceFadeIn 2s ease-in-out; /* Adjust the duration here */
+  }
+
+.underline {
+  pointer-events: none;
+  border-bottom: 2px solid #ADBA97;
+}

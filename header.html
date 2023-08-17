@@ -17,24 +17,5 @@
       <a href="resume.html" class="hover">resume</a>
     </div>
   </div>
-
-  <script>
-    $(document).ready(function() {
-      // Get the filename of the current page without the leading "/"
-      var currentPage = window.location.pathname.split('/').pop();
-      if (currentPage === "") {
-        currentPage = "index.html"; // Set the homepage's filename
-      }
-
-      // Loop through each link in the header and check if its filename matches the current page
-      $('.links a').each(function() {
-        var linkPage = this.href.split('/').pop();
-
-        if (linkPage === currentPage) {
-          $(this).addClass('active');
-        }
-      });
-    });
-  </script>
 </body>
 </html>

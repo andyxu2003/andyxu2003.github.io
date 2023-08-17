@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="./css/homepage.css" />
 <link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
 
 <html>
   <head>
@@ -8,18 +9,81 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <script>
-    $(function () {
-      $("#header").load("header.html");
-      $("#footer").load("footer.html");
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInDiv = document.getElementById("intro-container");
+      fadeInDiv.classList.add("fade-in");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select the div element
+      const divToFadeIn = document.getElementById("arrow");
+
+      // Set a timeout to fade in the div after 1 seconds
+      setTimeout(function () {
+        divToFadeIn.style.opacity = "1";
+      }, 1000); // 
     });
   </script>
   <body>
-    <div id="header"></div>
+    <div class="background beige">
+      <div class="header">
+        <h1 class="title">
+          <a href="/" class="home">Andy Xu</a>
+        </h1>
+        <div class="links">
+          <a href="about.html" class="hover">
+            <span class="highlight-overlay"></span>
+            about
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1flQ9OKhiL2U2P9s2anUPv7fbazL4g0fb/view?usp=sharing"
+            class="hover"
+            target="_blank"
+          >
+            <span class="highlight-overlay"></span>
+            resume
+          </a>
+        </div>
+      </div>
 
-    <div class="welcome-container">
-      Hi, I'm Andy, <br />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quae,
-      accusamus at sed quas quo! Fuga quasi magnam
+      <div class="intro-container" id="intro-container">
+        <div class="intro-text">
+          Hi, I'm Andy, a student @ Tufts University based in Boston, MA
+        </div>
+      </div>
+      <div class="arrow-container" id="arrow">work ↓</div>
     </div>
+    <div class="background white"></div>
+
+    <div class="footer-container">
+      <footer>
+        <div class="designed">designed by Andy Xu</div>
+        <div class="contact">
+          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
+          <a
+            href="https://www.linkedin.com/in/andyxu2003/"
+            target="_blank"
+            >LinkedIn^</a
+          >
+          <a
+            href="https://www.instagram.com/andyxuonfilm/"
+            target="_blank"
+            >photography^</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const arrow = document.getElementById("arrow");
+      const redPage = document.querySelector(".white");
+
+      arrow.addEventListener("click", () => {
+        window.scrollTo({
+          top: redPage.offsetTop,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
