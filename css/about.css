@@ -51,12 +51,14 @@ body {
 @media (max-width: 768px) {
   .self {
     max-width: 80%;
-    height: auto !important;
+    height: auto;
+    margin-top: 2%;
   }
 
   .about-text {
     max-width: 90%;
     padding: 5% 0;
+    margin-top: 2%; /* Adjust margin-top value */
   }
 
 }
