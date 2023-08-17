@@ -91,3 +91,22 @@
 .white {
   background-color: white;
 }
+
+@media (max-width: 768px) {
+  .intro-container {
+    width: 90%;
+    height: auto;
+    max-height: 70vh;
+  }
+
+  .intro-text {
+    width: 100%;
+    padding-left: 0;
+    font-size: 18px;
+  }
+
+  .arrow-container {
+    font-size: 18px;
+    bottom: 10px;
+  }
+}
