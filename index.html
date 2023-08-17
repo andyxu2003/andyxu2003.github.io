@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>Andy Xu</title>
-    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -30,8 +30,17 @@
         divToFadeIn.style.opacity = "1";
       }, 1000); //
     });
+
+    window.addEventListener("scroll", () => {
+      const scrollProgressBar = document.getElementById("scrollBar");
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / totalHeight) * 100;
+
+      scrollProgressBar.style.width = `${scrolled}%`;
+    });
   </script>
   <body>
+    <div id="scrollBar"></div>
     <div class="wrapper">
       <div class="background beige">
         <div class="header">

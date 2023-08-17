@@ -25,8 +25,18 @@
         divToFadeIn.style.opacity = "1";
       }, 1000); //
     });
+
+    window.addEventListener("scroll", () => {
+      const scrollProgressBar = document.getElementById("scrollBar");
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / totalHeight) * 100;
+
+      scrollProgressBar.style.width = `${scrolled}%`;
+    });
   </script>
   <body>
+    <div id="scrollBar"></div>
+
     <div class="header">
       <h1 class="title">
         <a href="/" class="home">Andy Xu</a>
