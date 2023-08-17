@@ -5,12 +5,19 @@
 <html>
   <head>
     <title>Andy Xu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
   </head>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const fadeInDiv = document.getElementById("intro-container");
       fadeInDiv.classList.add("fade-in");
+
+      fadeInDiv.addEventListener("mouseenter", function () {
+        fadeInDiv.classList.remove("fade-in");
+      });
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -20,53 +27,87 @@
       // Set a timeout to fade in the div after 1 seconds
       setTimeout(function () {
         divToFadeIn.style.opacity = "1";
-      }, 1000); // 
+      }, 1000); //
     });
   </script>
   <body>
-    <div class="background beige">
-      <div class="header">
-        <h1 class="title">
-          <a href="/" class="home">Andy Xu</a>
-        </h1>
-        <div class="links">
-          <a href="about" class="hover">
-            <span class="highlight-overlay"></span>
-            about
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1flQ9OKhiL2U2P9s2anUPv7fbazL4g0fb/view?usp=sharing"
-            class="hover"
-            target="_blank"
-          >
-            <span class="highlight-overlay"></span>
-            resume
-          </a>
+    <div class="wrapper">
+      <div class="background beige">
+        <div class="header">
+          <h1 class="title">
+            <a href="/" class="home">Andy Xu</a>
+          </h1>
+          <div class="links">
+            <a href="about" class="hover">
+              <span class="highlight-overlay"></span>
+              about
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1flQ9OKhiL2U2P9s2anUPv7fbazL4g0fb/view?usp=sharing"
+              class="hover"
+              target="_blank"
+            >
+              <span class="highlight-overlay"></span>
+              resume
+            </a>
+          </div>
         </div>
+
+        <div class="intro-container" id="intro-container">
+          <div class="intro-text">
+            Hi, I'm Andy, a student @ Tufts University based in Boston, MA
+          </div>
+        </div>
+
+        <div class="arrow-container" id="arrow">work ↓</div>
       </div>
 
-      <div class="intro-container" id="intro-container">
-        <div class="intro-text">
-          Hi, I'm Andy, a student @ Tufts University based in Boston, MA
+      <div class="white">
+        <div class="portfolio-container">
+          <div class="project-container" id="fade-scroll">
+            <a href="https://example.com/" class="project-link">
+              <img src="images/light-gray.png" class="project-image" />
+              <div class="project-title">Project Title</div>
+              <div class="position">Position</div>
+            </a>
+          </div>
+
+          <div class="project-container" id="fade-scroll">
+            <a href="https://example.com/" class="project-link">
+              <img src="images/light-gray.png" class="project-image" />
+              <div class="project-title">Project Title</div>
+              <div class="position">Position</div>
+            </a>
+          </div>
+
+          <div class="project-container" id="fade-scroll">
+            <a href="https://example.com/" class="project-link">
+              <img src="images/light-gray.png" class="project-image" />
+              <div class="project-title">Project Title</div>
+              <div class="position">Position</div>
+            </a>
+          </div>
+
+          <div class="project-container" id="fade-scroll">
+            <a href="https://example.com/" class="project-link">
+              <img src="images/light-gray.png" class="project-image" />
+              <div class="project-title">Project Title</div>
+              <div class="position">Position</div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="arrow-container" id="arrow">work ↓</div>
     </div>
-    <div class="background white"></div>
 
     <div class="footer-container">
       <footer>
         <div class="designed">designed by Andy Xu</div>
         <div class="contact">
           <a href="mailto:xuandy@live.com">xuandy@live.com</a>
-          <a
-            href="https://www.linkedin.com/in/andyxu2003/"
-            target="_blank"
+          <a href="https://www.linkedin.com/in/andyxu2003/" target="_blank"
             >LinkedIn^</a
           >
-          <a
-            href="https://www.instagram.com/andyxuonfilm/"
-            target="_blank"
+          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
             >photography^</a
           >
         </div>
@@ -83,6 +124,37 @@
           behavior: "smooth",
         });
       });
+
+      // fade in on scroll
+
+      const fadeDivs = document.querySelectorAll("#fade-scroll");
+
+      function fadeInOnScroll() {
+        const windowHeight = window.innerHeight;
+
+        fadeDivs.forEach((fadeDiv) => {
+          const fadeDivTop = fadeDiv.getBoundingClientRect().top;
+
+          if (
+            fadeDivTop < windowHeight * 0.9 &&
+            !fadeDiv.classList.contains("faded")
+          ) {
+            fadeDiv.style.opacity = 1;
+            fadeDiv.style.transform = "translateY(0)";
+            fadeDiv.classList.add("faded");
+          } else if (
+            fadeDivTop >= windowHeight * 0.9 &&
+            fadeDiv.classList.contains("faded")
+          ) {
+            fadeDiv.style.opacity = 0;
+            fadeDiv.style.transform = "translateY(50px)";
+            fadeDiv.classList.remove("faded");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", fadeInOnScroll);
+      window.addEventListener("load", fadeInOnScroll);
     </script>
   </body>
 </html>

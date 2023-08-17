@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Courier+Prime");
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-  font-weight: normal;
+  font-weight: 700;
   font-size: 18px;
 }
 
