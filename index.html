@@ -10,7 +10,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
   </head>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const fadeInDiv = document.getElementById("intro-container");
@@ -109,20 +116,7 @@
       </div>
     </div>
 
-    <div class="footer-container">
-      <footer>
-        <div class="designed">designed by Andy Xu</div>
-        <div class="contact">
-          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
-          <a href="https://www.linkedin.com/in/andyxu2003/" target="_blank"
-            >LinkedIn^</a
-          >
-          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
-            >photography^</a
-          >
-        </div>
-      </footer>
-    </div>
+    <div id="footer"></div>
 
     <script>
       const arrow = document.getElementById("arrow");
