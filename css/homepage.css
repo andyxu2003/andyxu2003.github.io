@@ -167,11 +167,12 @@
 .project-image {
   width: 100%; /* Keep width at 100% */
   max-width: 100%; /* Set max-width to 100% to fit within screen */
-  height: auto;
+  height: 300px;
   border: 1px solid black;
   position: relative;
   top: 0;
   transition: top ease 0.5s;
+  object-fit: cover;
 }
 
 .project-image:hover {
@@ -237,6 +238,7 @@
   .project-image {
     max-width: 100%;
     height: auto;
+
   }
 }
 
