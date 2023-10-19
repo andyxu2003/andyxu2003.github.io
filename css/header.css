@@ -8,7 +8,6 @@ body {
   text-decoration: none;
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background-color: #FFF4EA;
 }
 
 .header {
