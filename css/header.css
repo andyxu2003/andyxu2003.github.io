@@ -24,9 +24,9 @@ body {
   color: black;
 }
 
-h1 {
+.title {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .links {

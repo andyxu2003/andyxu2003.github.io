@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="./css/a2makerspace.css" />
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+
+<html>
+  <head>
+    <title>Andy Xu</title>
+    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      charset="UTF-8"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="scrollBar"></div>
+        <div class="header">
+          <h1 class="title">
+            <a href="/" class="home">Andy Xu</a>
+          </h1>
+          <div class="links">
+            <a href="about" class="hover">
+              <span class="highlight-overlay"></span>
+              about
+            </a>
+            <a
+              href="https://andywxu.com/Resume.pdf"
+              class="hover"
+              target="_blank"
+            >
+              <span class="highlight-overlay"></span>
+              resume
+            </a>
+          </div>
+        </div>
+        <div class="wrapper">
+            <h2>Hybrid Accessible Makerspace | A2Makerspace</h2>
+            <img src="images/a2makerspace screenshot.png" id="website-screenshot">
+        </div>
+
+    <div id="footer"></div>
+
+    <script>
+    </script>
+  </body>
+</html>
