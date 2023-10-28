@@ -1,17 +1,135 @@
 body {
-    background-color: #FAF0E7;
+  background-color: #faf0e7;
 }
 
 .wrapper {
-    margin: 0 14%;
-    padding-top: 2%;
+  margin: 0 14%;
+  padding-top: 30px;
 }
 
 h2 {
-    font-size: 36px;
+  font-size: 36px;
+  padding-bottom: 25px;
 }
 
-#website-screenshot {
-    width: 100%;
-    border-radius: 15px;
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounceFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px); /* Bounce up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: bounceFadeIn 2s ease-in-out; /* Adjust the duration here */
+}
+
+#main {
+  cursor: pointer;
+}
+
+.website-screenshot {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.website-screenshot:hover {
+  transform: translateY(-10px); /* Adjust the amount to move up */
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 75px 0;
+  opacity: 0; /* Start with an invisible div */
+  transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Create four equal columns */
+.column {
+  width: 25%;
+  padding-left: 10px;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+.column-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: -5px;
+  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 150%;
+  font-size: 18px;
+}
+
+.content {
+  padding-bottom: 50px;
+}
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-scroll.faded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-heading {
+  font-size: 24px;
+  font-weight: bold;
+  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+}
+
+.content-text {
+  line-height: 150%;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.content-image {
+  width: 100%;
+  border-radius: 15px;
 }
