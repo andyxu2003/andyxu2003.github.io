@@ -100,7 +100,7 @@ h3 {
   background: linear1-gradient(to top, #adba97 50%, transparent 50%);
 }
 
-ul {
+.column ul {
   list-style: none;
   padding-left: 0;
   line-height: 150%;
@@ -134,7 +134,15 @@ ul {
 
 .content-text {
   line-height: 150%;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+.content-text ul {
+  display: inline-block;
+  list-style-position: outside;
+  text-align: left;
+  line-height: 150%;
+  font-size: 18px;
 }
 
 .content-image {
