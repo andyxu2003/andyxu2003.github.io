@@ -102,9 +102,9 @@ ul {
   font-size: 18px;
 }
 
-.content {
+/* .content {
   padding-bottom: 50px;
-}
+} */
 
 .fade-scroll {
   opacity: 0;
@@ -117,19 +117,31 @@ ul {
   transform: translateY(0);
 }
 
+.content-heading-container {
+  margin-bottom: 15px;
+}
+
 .content-heading {
   font-size: 24px;
   font-weight: bold;
-  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+  background: linear-gradient(to top, #adba97 50%, transparent 50%); 
 }
 
 .content-text {
   line-height: 150%;
   font-size: 16px;
-  padding-top: 10px;
 }
 
 .content-image {
   width: 100%;
   border-radius: 15px;
 }
+
+.space-10px {
+  height: 10px;
+}
+
+.space-50px {
+  height: 50px;
+}
+
