@@ -9,7 +9,12 @@ body {
 
 h2 {
   font-size: 36px;
-  padding-bottom: 25px;
+}
+
+h3 {
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-weight: normal;
 }
 
 @keyframes bounce {
@@ -92,7 +97,7 @@ h2 {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: -5px;
-  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+  background: linear1-gradient(to top, #adba97 50%, transparent 50%);
 }
 
 ul {
