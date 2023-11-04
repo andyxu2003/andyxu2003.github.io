@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="./css/projectpage.css" />
-<link rel="stylesheet" href="./css/header.css" />
-<link rel="stylesheet" href="./css/footer.css" />
+<link rel="stylesheet" href="../css/projectpage.css" />
+<link rel="stylesheet" href="../css/header.css" />
+<link rel="stylesheet" href="../css/footer.css" />
 
 <html>
   <head>
@@ -12,11 +12,7 @@
       charset="UTF-8"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-      $(function () {
-        $("#footer").load("footer.html");
-      });
-    </script>
+    <script src="../javascript/footer.js"></script>
   </head>
 
   <body>
@@ -24,23 +20,20 @@
 
     <div class="header">
       <h1 class="title">
-        <a href="/" class="home">Andy Xu</a>
+        <a href="../" class="home">Andy Xu</a>
       </h1>
 
       <div class="links">
-        <a href="about" class="hover">
-          <span class="highlight-overlay"></span>
-          about
+        <a href="../about" class="hover">
+          <span>about</span>
         </a>
 
-        <a href="photography" class="hover">
-          <span class="highlight-overlay"></span>
-          photography
+        <a href="../photography" class="hover">
+          <span>photography</span>
         </a>
 
         <a href="https://andywxu.com/Resume.pdf" class="hover" target="_blank">
-          <span class="highlight-overlay"></span>
-          resume
+          <span>resume</span>
         </a>
       </div>
     </div>
@@ -185,51 +178,6 @@
 
     <div id="footer"></div>
 
-    <script>
-      window.addEventListener("scroll", () => {
-        const scrollProgressBar = document.getElementById("scrollBar");
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        const scrolled = (window.scrollY / totalHeight) * 100;
-
-        scrollProgressBar.style.width = `${scrolled}%`;
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const fadeInDiv = document.getElementById("main");
-        fadeInDiv.classList.add("fade-in");
-      });
-
-      const fadeDivs = document.querySelectorAll(".fade-scroll");
-
-      function fadeInOnScroll() {
-        const windowHeight = window.innerHeight;
-
-        fadeDivs.forEach((fadeDiv) => {
-          const fadeDivTop = fadeDiv.getBoundingClientRect().top;
-
-          if (
-            fadeDivTop < windowHeight * 0.9 &&
-            !fadeDiv.classList.contains("faded")
-          ) {
-            fadeDiv.style.opacity = 1;
-            fadeDiv.style.transform = "translateY(0)";
-            fadeDiv.classList.add("faded");
-          } else if (
-            fadeDivTop >= windowHeight * 0.9 &&
-            fadeDiv.classList.contains("faded")
-          ) {
-            fadeDiv.style.opacity = 0;
-            fadeDiv.style.transform = "translateY(50px)";
-            fadeDiv.classList.remove("faded");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", fadeInOnScroll);
-      window.addEventListener("load", fadeInOnScroll);
-
-      // Initial call to fadeInOnScroll when the page loads
-      fadeInOnScroll();
-    </script>
+    <script src="../javascript/projectpage.js"></script>
   </body>
 </html>

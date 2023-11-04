@@ -60,6 +60,10 @@ body {
   transform-origin: bottom left;
 }
 
+.highlight {
+  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+}
+
 /* FOR SMALLER SCREENS */
 
 /* Smaller screens */
