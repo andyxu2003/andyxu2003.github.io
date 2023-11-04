@@ -11,10 +11,12 @@ h2 {
   font-size: 36px;
 }
 
-h3 {
+.date {
   text-decoration: none;
+  margin-top: -10px;
   padding-bottom: 20px;
   font-weight: normal;
+  font-size: 18px;
 }
 
 @keyframes bounce {
