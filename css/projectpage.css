@@ -56,7 +56,7 @@ h2 {
   width: 100%;
   border-radius: 15px;
   transition: transform 0.3s ease;
-}
+} 
 
 .website-screenshot:hover {
   transform: translateY(-10px); /* Adjust the amount to move up */
@@ -140,6 +140,7 @@ h2 {
 }
 
 .content-text ul {
+  margin-top: 0px;
   display: inline-block;
   list-style-position: outside;
   text-align: left;
@@ -150,6 +151,31 @@ h2 {
 .content-image {
   width: 100%;
   border-radius: 15px;
+}
+
+.wireframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.wireframe {
+  flex: 0 1 calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+.wireframe img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+figcaption {
+  padding: 10px 0;
+  text-align: left;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .space-10px {
