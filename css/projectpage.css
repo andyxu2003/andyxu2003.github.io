@@ -48,18 +48,36 @@ h2 {
   animation: bounceFadeIn 2s ease-in-out; /* Adjust the duration here */
 }
 
-#main {
-  cursor: pointer;
-}
-
 .website-screenshot {
   width: 100%;
   border-radius: 15px;
-  transition: transform 0.3s ease;
 } 
 
-.website-screenshot:hover {
-  transform: translateY(-10px); /* Adjust the amount to move up */
+.link {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ADBA97;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* * {
