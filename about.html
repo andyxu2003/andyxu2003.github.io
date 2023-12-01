@@ -5,11 +5,35 @@
 <html>
   <head>
     <title>About</title>
-    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="javascript/footer.js"></script>
+    <script src="javascript/header-footer.js"></script>
   </head>
+
+  <body>
+    <div id="scrollBar"></div>
+
+    <div id="header"></div>
+
+    <img src="images/self-photo.png" class="self" id="self" />
+    <div class="about-text" id="about-text">
+      I'm a 3rd year student at Tufts University studying Engineering Psychology
+      and Community Health. I'm an aspiring UI/UX designer, interested in UX,
+      product design, research, human interaction, and anything else related to
+      design. I want to make things a little easier to use and look a little
+      nicer.
+      <br />
+      <br />
+      Currently available to work!
+    </div>
+
+    <div id="footer"></div>
+  </body>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const fadeInDiv = document.getElementById("self");
@@ -34,38 +58,4 @@
       scrollProgressBar.style.width = `${scrolled}%`;
     });
   </script>
-  <body>
-    <div id="scrollBar"></div>
-
-    <div class="header">
-      <h1 class="title">
-        <a href="/" class="home">Andy Xu</a>
-      </h1>
-
-      <div class="links">
-        <a href="about" class="hover">
-          <span class="highlight">about</span>
-        </a>
-
-        <a href="photography" class="hover">
-          <span>photography</span>
-        </a>
-
-        <a href="https://andywxu.com/Resume.pdf" class="hover" target="_blank">
-          <span>resume</span>
-        </a>
-      </div>
-    </div>
-
-    <img src="images/self-photo.png" class="self" id="self" />
-    <div class="about-text" id="about-text">
-      I'm a 3rd year student at Tufts University studying Engineering Psychology and Community Health. I'm an aspiring UI/UX designer, interested in UX, product design, research, human interaction, and anything else related to design. I want to make things a little easier to use and look a little nicer.
-      <br>
-      <br>
-      Currently available to work!
-    </div>
-
-    <div id="footer"></div>
-    
-  </body>
 </html>
