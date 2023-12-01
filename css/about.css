@@ -61,3 +61,45 @@ body {
   }
 
 }
+
+.contact-container {
+  border: 2px black solid;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+
+}
+
+.contact-box {
+  flex: 1;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  transition-duration: .3s;
+}
+
+.contact-box:first-child {
+  border-right: 2px black solid;
+  border-radius: 20px 0 0 20px;
+}
+
+.contact-box:nth-child(2) {
+  border-radius: 0 20px 20px 0;
+}
+
+.contact-box:hover {
+  background-color: #ADBA97;
+  color: white;
+  text-decoration: underline;
+}
+
+/* Media query for screens 600px and smaller */
+@media (max-width: 600px) {
+  .contact-box {
+      flex: 100%; /* Full width on smaller screens */
+  }
+}
