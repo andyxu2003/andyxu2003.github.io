@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="./css/photography.css" />
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+
+<html>
+  <head>
+    <title>Photography</title>
+    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      charset="UTF-8"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="javascript/header-footer.js"></script>
+  </head>
+
+  <body>
+    <div id="scrollBar"></div>
+
+    <div id="header"></div>
+
+    <div class="container">
+        <a href="photography/monica" class="no-decoration">
+            <div class="gallery-container fade-scroll">
+                <div class="text">
+                    <span class="gallery-title">Monica</span> 
+                    <br>
+                    <span class="year">2023</span>
+                    <br>
+                    <span class="info">Minolta X-700 | Kodak Gold 200</span>
+                </div>
+                <div class="image">
+                    <img src="film images/monica/000260590015.jpg">
+                </div>
+            </div>
+        </a>
+
+        <a href="photography/shirley" class="no-decoration">
+            <div class="gallery-container fade-scroll">
+                <div class="text">
+                    <span class="gallery-title">Shirley</span> 
+                    <br>
+                    <span class="year">2023</span>
+                    <br>
+                    <span class="info">Minolta X-700 | Kodak Gold 200</span>
+                </div>
+                <div class="image">
+                    <img src="film images/shirley/000260590027.jpg">
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        window.addEventListener("scroll", () => {
+          const scrollProgressBar = document.getElementById("scrollBar");
+          const totalHeight = document.body.scrollHeight - window.innerHeight;
+          const scrolled = (window.scrollY / totalHeight) * 100;
+  
+          scrollProgressBar.style.width = `${scrolled}%`;
+        });
+  
+        const fadeDivs = document.querySelectorAll(".fade-scroll");
+  
+        function fadeInOnScroll() {
+          const windowHeight = window.innerHeight;
+  
+          fadeDivs.forEach((fadeDiv) => {
+            const fadeDivTop = fadeDiv.getBoundingClientRect().top;
+  
+            if (
+              fadeDivTop < windowHeight * 0.9 &&
+              !fadeDiv.classList.contains("faded")
+            ) {
+              fadeDiv.style.opacity = 1;
+              fadeDiv.style.transform = "translateY(0)";
+              fadeDiv.classList.add("faded");
+            } else if (
+              fadeDivTop >= windowHeight * 0.9 &&
+              fadeDiv.classList.contains("faded")
+            ) {
+              fadeDiv.style.opacity = 0;
+              fadeDiv.style.transform = "translateY(50px)";
+              fadeDiv.classList.remove("faded");
+            }
+          });
+        }
+  
+        window.addEventListener("scroll", fadeInOnScroll);
+        window.addEventListener("load", fadeInOnScroll);
+  
+        // Initial call to fadeInOnScroll when the page loads
+        fadeInOnScroll();
+      </script>
+  </body>
+</html>

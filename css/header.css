@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  font-weight: 700;
+  margin: 0 14%;
+}
+
+.home {
+  text-decoration: none;
+  color: black;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ADBA97;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.highlight {
+  background: linear-gradient(to top, #adba97 50%, transparent 50%);
+}
+
+/* FOR SMALLER SCREENS */
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .links {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .links a {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+}
+
+#scrollBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 6px;
+  background-color: #ADBA97;
+  z-index: 9999;
+  transition: width 0.1s;
+}

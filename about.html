@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="./css/about.css" />
+<link rel="stylesheet" href="./css/header.css" />
+<link rel="stylesheet" href="./css/footer.css" />
+
+<html>
+  <head>
+    <title>About</title>
+    <link rel="icon" type="image/x-icon" href="images/snoopy-icon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="javascript/header-footer.js"></script>
+  </head>
+
+  <body>
+    <div id="scrollBar"></div>
+
+    <div id="header"></div>
+
+    <img src="images/self-photo.png" class="self" id="self" />
+    <div class="about-text" id="about-text">
+      I'm a 3rd year student at Tufts University studying Engineering Psychology
+      and Community Health. I'm an aspiring UI/UX designer, interested in UX,
+      product design, research, human interaction, and anything else related to
+      design. I want to make things a little easier to use and look a little
+      nicer.
+      <br />
+      <br />
+      Currently available to work!
+      <br />
+      <br />
+      Connect with me!
+      <div class="contact-container">
+        <a class="contact-box" href="mailto:xuandy@live.com">Email</a>
+        <a class="contact-box" href="https://www.linkedin.com/in/andyxu2003/">LinkedIn</a>
+      </div>
+      <br />
+      <br />
+      Check out more of my work on my <a class="muse" href="https://muse.io/xuandy2003">Muse.io portfolio</a>
+      <br />
+      <br />
+    </div>
+
+    <div id="footer"></div>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeInDiv = document.getElementById("self");
+      fadeInDiv.classList.add("fade-in");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Select the div element
+      const divToFadeIn = document.getElementById("about-text");
+
+      // Set a timeout to fade in the div after 1 seconds
+      setTimeout(function () {
+        divToFadeIn.style.opacity = "1";
+      }, 1000); //
+    });
+
+    window.addEventListener("scroll", () => {
+      const scrollProgressBar = document.getElementById("scrollBar");
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / totalHeight) * 100;
+
+      scrollProgressBar.style.width = `${scrolled}%`;
+    });
+  </script>
+</html>
