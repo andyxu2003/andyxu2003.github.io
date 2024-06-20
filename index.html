@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div id="scrollBar"></div>
+    <div id="progressBar"></div>
 
     <div id="header"></div>
 
@@ -42,7 +42,7 @@
           var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
           var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
           var scrolled = (winScroll / height) * 100;
-          document.getElementById("scrollBar").style.width = scrolled + "%";
+          document.getElementById("progressBar").style.width = scrolled + "%";
       }
     </script>
 
