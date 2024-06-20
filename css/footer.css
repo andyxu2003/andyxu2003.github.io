@@ -34,11 +34,10 @@ footer {
   text-decoration: none;
   color: black;
   transition-duration: .3s;
-  font-weight: 700;
 }
 
 .contact a:hover {
-    color: white;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {

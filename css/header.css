@@ -15,8 +15,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
-  font-weight: 700;
-  margin: 0 8%;
+  margin: 15px 8% 0 8%;
 }
 
 .home {
@@ -25,7 +24,6 @@ body {
 }
 
 .title {
-  font-weight: 700;
   font-size: 28px;
 }
 
@@ -50,7 +48,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ADBA97;
+  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
