@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  margin: 0 14%;
+  margin: 0 8%;
   font-size: 16px;
+  border-top: 2px solid black;
 }
 
 .designed {

@@ -14,9 +14,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 40px;
   font-weight: 700;
-  margin: 0 14%;
+  margin: 0 8%;
 }
 
 .home {
