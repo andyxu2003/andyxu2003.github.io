@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 6%;
 }
 
 .image-gallery {
@@ -13,20 +13,19 @@
 }
 
 .image {
-  height: 75ch;
+  height: 78ch;
   width: auto; /* Adjust the max-width as needed */
   object-fit: contain;
   display: none;
   margin-left: auto;
   margin-right: auto;
-  border: 10px solid #E8E8E8
+  border: 10px solid #E8E8E8;
 }
 
 .prev-button,
 .next-button {
   border: none;
   background-color: transparent;
-  /* padding: 10px 20px; */
   cursor: pointer;
   font-size: 40px;
   position: absolute;
@@ -34,10 +33,12 @@
     transform: translateY(-50%); */
   z-index: 1;
   margin: 0 10%;
+  color: black !important;
 }
 
 .prev-button {
   left: 0;
+
 }
 
 .next-button {
@@ -48,13 +49,12 @@
   text-align: center;
   font-size: 36px;
   padding-top: 4%;
-  padding-bottom: 12px;
+  padding-bottom: 1%;
+  line-height: 1.5;
 }
 
 .date {
-  text-align: center;
   font-size: 18px;
-  
 }
 
 .fade-scroll {
@@ -77,6 +77,7 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
+      border: 9px solid #e8e8e8;
     }
   }
 
@@ -88,6 +89,7 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
+      border: 8px solid #e8e8e8;
     }
   }
 
@@ -99,41 +101,65 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
+      border: 7px solid #e8e8e8
     }
   }
 
 @media (max-width: 768px) {
   .image {
     max-height: 30ch;
-    width: auto; /* Adjust the max-width as needed */
+    width: auto;
     object-fit: contain;
     display: none;
     margin-left: auto;
     margin-right: auto;
+    border: 6px solid #e8e8e8;
   }
+
+  .prev-button {
+    left: -30;
+    font-size: 32px;
+  
+  }
+  
+  .next-button {
+    right: -30;
+    font-size: 32px;
+  }
+  
 }
 
 @media (max-width: 600px) {
     .image {
       max-height: 22ch;
-      width: auto; /* Adjust the max-width as needed */
+      width: auto; 
       object-fit: contain;
       display: none;
       margin-left: auto;
       margin-right: auto;
+      border: 5px solid #e8e8e8;
+    }
+
+    .prev-button {
+      left: -30;
+    
+    }
+    
+    .next-button {
+      right: -30;
     }
   }
 
-  @media (max-width: 420px) {
+  /* @media (max-width: 420px) {
     .image {
       max-height: 18ch;
-      width: auto; /* Adjust the max-width as needed */
+      width: auto; 
       object-fit: contain;
       display: none;
       margin-left: auto;
       margin-right: auto;
     }
-  }
+  } */
 
   .link-container {
     display: flex;

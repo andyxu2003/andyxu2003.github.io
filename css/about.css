@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .self {
     margin: auto;
     display: block;
@@ -10,7 +16,7 @@
     width: 750px;
     margin: auto;
     margin-top: 4%;
-    margin-bottom: 4%;
+    /* margin-bottom: 4%; */
     font-family: "Courier Prime", serif !important;
     font-weight: 400;
     line-height: 1.7;

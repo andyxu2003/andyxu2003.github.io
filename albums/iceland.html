@@ -37,7 +37,24 @@ Repeat this HTML with 21 images for 21 <img> lines total, updating the number co
 
 <body>
 
-    <div id="header"></div>
+    <!-- <div id="header"></div> -->
+    <div class="header">
+      <div class="title">
+        <a href="/" class="home">Andy Xu</a>
+      </div>
+      <div class="links">
+
+        <a href="../albums" class="hover">
+          <span class="highlight-overlay"></span>
+          albums
+        </a>
+
+        <a href="../about" class="hover">
+          <span class="highlight-overlay"></span>
+          about
+        </a>
+      </div>
+    </div>
 
     <div class="image-gallery-container ">
         <button class="prev-button" onclick="showImage(-1)"><</button>
@@ -69,8 +86,7 @@ Repeat this HTML with 21 images for 21 <img> lines total, updating the number co
         <button class="next-button" onclick="showImage(1)">></button>
     </div>
 
-    <div class="heading">Iceland</div>
-    <div class="date">May 2024</div>
+    <div class="heading">Iceland <br> <span class="date">May 2024</span></div>
 
     <div class="link-container">
         <div class="left-link">
@@ -81,7 +97,18 @@ Repeat this HTML with 21 images for 21 <img> lines total, updating the number co
         </div>
     </div>
 
-    <div id="footer"></div>
+    <!-- <div id="footer"></div> -->
+    <div class="footer-container">
+      <footer>
+        <div class="designed">designed by Andy Xu | Jun 2024</div>
+        <div class="contact">
+          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
+          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
+            >instagram</a
+          >
+        </div>
+      </footer>
+    </div>
 
     <script src="../javascript/photogallery.js"></script>
 </body>
