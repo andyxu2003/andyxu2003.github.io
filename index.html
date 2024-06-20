@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/homepage.css" />
+<link rel="stylesheet" href="./css/overview.css" />
 <link rel="stylesheet" href="./css/header.css" />
 <link rel="stylesheet" href="./css/footer.css" />
 
@@ -17,155 +17,15 @@
 
   <body>
     <div id="scrollBar"></div>
-    <div class="wrapper">
-      <div class="background beige">
-        <div id="header"></div>
 
-        <div class="intro-container" id="intro-container">
-          <div class="intro-text">
-            <div id="greeting"></div>
-            I'm Andy, a student @ Tufts University with a passion for design
-          </div>
-        </div>
-
-        <div class="arrow-container" id="arrow">work ↓</div>
-      </div>
-
-      <div class="white">
-        <div class="portfolio-container">
-          <div class="project-container" id="fade-scroll">
-            <a href="work/a2makerspace" class="project-link">
-              <img
-                src="images/tufts-ceeo-logo.png"
-                class="project-image"
-                alt="Tufts CEEO Logo"
-              />
-              <div class="project-title">Hybrid Accessible Makerspace</div>
-              <div class="position">Website Design Researcher @ Tufts CEEO</div>
-            </a>
-          </div>
-
-          <div class="project-container" id="fade-scroll">
-            <a href="work/myfitnesspal-redesign" class="project-link">
-              <img
-                src="images/mfp logo.png"
-                class="project-image"
-                alt="MFP Redesign"
-              />
-              <div class="project-title">MyFitnessPal Redesign</div>
-              <div class="position">
-                Tufts ENP166: Computer Interface Design
-              </div>
-            </a>
-          </div>
-
-          <div class="project-container" id="fade-scroll">
-            <a href="work/dress-for-success" class="project-link">
-              <img
-                src="images/Dress for Success Logo.png"
-                class="project-image"
-              />
-              <div class="project-title">Dress for Success</div>
-              <div class="position">Lead Designer for JumboCode</div>
-            </a>
-          </div>
-
-          <!-- <div class="project-container" id="fade-scroll">
-            <a href="https://example.com/" class="project-link">
-              <img src="images/light-gray.png" class="project-image" />
-              <div class="project-title">Project Title</div>
-              <div class="position">Position</div>
-            </a>
-          </div> -->
-        </div>
-      </div>
+    <div class="imgbox">
+      <img class="center-fit" src="photos/Favorites/Favorites 1 (Iceland) F.jpg" alt="Favorites 1">
     </div>
+    <div class="imgbox">
+      <img class="center-fit" src="photos/Favorites/Favorites 2 (Iceland).jpg" alt="Favorites 1">
+    </div>s  
 
     <div id="footer"></div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const fadeInDiv = document.getElementById("intro-container");
-        fadeInDiv.classList.add("fade-in");
-
-        // fadeInDiv.addEventListener("mouseenter", function () {
-        //   fadeInDiv.classList.remove("fade-in");
-        // });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Select the div element
-        const divToFadeIn = document.getElementById("arrow");
-
-        // Set a timeout to fade in the div after 1 seconds
-        setTimeout(function () {
-          divToFadeIn.style.opacity = "1";
-        }, 1000); //
-      });
-
-      window.addEventListener("scroll", () => {
-        const scrollProgressBar = document.getElementById("scrollBar");
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        const scrolled = (window.scrollY / totalHeight) * 100;
-
-        scrollProgressBar.style.width = `${scrolled}%`;
-      });
-
-      // Greeting based on time of day
-
-      var myDate = new Date();
-      var hrs = myDate.getHours();
-
-      var greet;
-
-      if (hrs < 12) greet = "Good morning! ☀️";
-      else if (hrs >= 12 && hrs <= 17) greet = "Good afternoon! ⛅️";
-      else if (hrs >= 17 && hrs <= 24) greet = "Good evening! 🌙";
-
-      document.getElementById("greeting").innerHTML = greet;
-
-      // Arrow animation
-
-      const arrow = document.getElementById("arrow");
-      const redPage = document.querySelector(".white");
-
-      arrow.addEventListener("click", () => {
-        window.scrollTo({
-          top: redPage.offsetTop,
-          behavior: "smooth",
-        });
-      });
-
-      // Fade in on scroll
-
-      const fadeDivs = document.querySelectorAll("#fade-scroll");
-
-      function fadeInOnScroll() {
-        const windowHeight = window.innerHeight;
-
-        fadeDivs.forEach((fadeDiv) => {
-          const fadeDivTop = fadeDiv.getBoundingClientRect().top;
-
-          if (
-            fadeDivTop < windowHeight * 0.9 &&
-            !fadeDiv.classList.contains("faded")
-          ) {
-            fadeDiv.style.opacity = 1;
-            fadeDiv.style.transform = "translateY(0)";
-            fadeDiv.classList.add("faded");
-          } else if (
-            fadeDivTop >= windowHeight * 0.9 &&
-            fadeDiv.classList.contains("faded")
-          ) {
-            fadeDiv.style.opacity = 0;
-            fadeDiv.style.transform = "translateY(50px)";
-            fadeDiv.classList.remove("faded");
-          }
-        });
-      }
-
-      window.addEventListener("scroll", fadeInOnScroll);
-      window.addEventListener("load", fadeInOnScroll);
-    </script>
   </body>
 </html>
