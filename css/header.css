@@ -87,14 +87,3 @@ body {
     margin-right: 10px;
   }
 }
-
-#scrollBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 6px;
-  background-color: #ADBA97;
-  z-index: 9999;
-  transition: width 0.1s;
-}
