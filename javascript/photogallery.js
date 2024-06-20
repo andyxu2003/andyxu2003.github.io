@@ -22,42 +22,42 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-window.addEventListener("scroll", () => {
-  const scrollProgressBar = document.getElementById("scrollBar");
-  const totalHeight = document.body.scrollHeight - window.innerHeight;
-  const scrolled = (window.scrollY / totalHeight) * 100;
+// window.addEventListener("scroll", () => {
+//   const scrollProgressBar = document.getElementById("scrollBar");
+//   const totalHeight = document.body.scrollHeight - window.innerHeight;
+//   const scrolled = (window.scrollY / totalHeight) * 100;
 
-  scrollProgressBar.style.width = `${scrolled}%`;
-});
+//   scrollProgressBar.style.width = `${scrolled}%`;
+// });
 
-const fadeDivs = document.querySelectorAll(".fade-scroll");
+// const fadeDivs = document.querySelectorAll(".fade-scroll");
 
-function fadeInOnScroll() {
-  const windowHeight = window.innerHeight;
+// function fadeInOnScroll() {
+//   const windowHeight = window.innerHeight;
 
-  fadeDivs.forEach((fadeDiv) => {
-    const fadeDivTop = fadeDiv.getBoundingClientRect().top;
+//   fadeDivs.forEach((fadeDiv) => {
+//     const fadeDivTop = fadeDiv.getBoundingClientRect().top;
 
-    if (
-      fadeDivTop < windowHeight * 0.9 &&
-      !fadeDiv.classList.contains("faded")
-    ) {
-      fadeDiv.style.opacity = 1;
-      fadeDiv.style.transform = "translateY(0)";
-      fadeDiv.classList.add("faded");
-    } else if (
-      fadeDivTop >= windowHeight * 0.9 &&
-      fadeDiv.classList.contains("faded")
-    ) {
-      fadeDiv.style.opacity = 0;
-      fadeDiv.style.transform = "translateY(50px)";
-      fadeDiv.classList.remove("faded");
-    }
-  });
-}
+//     if (
+//       fadeDivTop < windowHeight * 0.9 &&
+//       !fadeDiv.classList.contains("faded")
+//     ) {
+//       fadeDiv.style.opacity = 1;
+//       fadeDiv.style.transform = "translateY(0)";
+//       fadeDiv.classList.add("faded");
+//     } else if (
+//       fadeDivTop >= windowHeight * 0.9 &&
+//       fadeDiv.classList.contains("faded")
+//     ) {
+//       fadeDiv.style.opacity = 0;
+//       fadeDiv.style.transform = "translateY(50px)";
+//       fadeDiv.classList.remove("faded");
+//     }
+//   });
+// }
 
-window.addEventListener("scroll", fadeInOnScroll);
-window.addEventListener("load", fadeInOnScroll);
+// window.addEventListener("scroll", fadeInOnScroll);
+// window.addEventListener("load", fadeInOnScroll);
 
-// Initial call to fadeInOnScroll when the page loads
-fadeInOnScroll();
+// // Initial call to fadeInOnScroll when the page loads
+// fadeInOnScroll();
