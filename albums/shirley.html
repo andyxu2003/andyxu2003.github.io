@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../css/photogallery.css" />
+<link rel="stylesheet" href="../css/header.css" />
+<link rel="stylesheet" href="../css/footer.css" />
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shirley</title>
+        <link rel="icon" type="image/x-icon" href="../images/snoopy-icon.png" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          charset="UTF-8"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="../javascript/header-footer.js"></script>
+      </head>
+<body>
+    <div id="scrollBar"></div>
+
+    <div id="header"></div>
+
+    <div class="image-gallery-container fade-scroll">
+        <button class="prev-button" onclick="showImage(-1)"><</button>
+        <div class="image-gallery">
+            <img class="image" src="../photos/Shirley/Shirley-1.jpg" alt="Shirley 1"/>
+            <img class="image" src="../photos/Shirley/Shirley-2.jpg" alt="Shirley 2"/>
+            <img class="image" src="../photos/Shirley/Shirley-3.jpg" alt="Shirley 3"/>            
+        </div>
+        <button class="next-button" onclick="showImage(1)">></button>
+    </div>
+
+    <div class="heading fade-scroll">Shirley</div>
+
+    <!-- LINKS TO OTHER ALBUMS -->
+    <div class="link-container">
+        <div class="left-link">
+          <!-- CHANGE TO ALBUM ON LEFT -->
+          <a href="./cape-cod">< Cape Cod</a> 
+        </div>
+        <div class="right-link">
+          <!-- CHANGE TO ALBUM ON RIGHT -->
+          <a href="./monica"> Monica ></a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../javascript/photogallery.js"></script>
+</body>
+</html>

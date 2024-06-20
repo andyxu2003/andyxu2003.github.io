@@ -1,0 +1,134 @@
+/* body {
+    background-color: #faf0e7;
+}
+
+.page-container {
+    margin: 50px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.33% - 10px); 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none !important; 
+  color: inherit; 
+  transition: opacity 0.3s ease; 
+}
+
+.gallery-item a { 
+  text-decoration: none !important; 
+  color: inherit !important; 
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gallery-item iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gallery-item:hover {
+  opacity: 0.7;
+}
+
+.caption {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.instagram-logo-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.instagram-logo-container img {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-logo-container img:hover {
+  opacity: 0.8;
+}
+ */
+
+.page-container {
+    margin: 40px;
+}
+
+/* Image Gallery */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
+  gap: 30px; /* Increased gap to 20px */
+}
+
+.gallery-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none !important; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+  transition: opacity 0.3s ease; /* Add transition for hover effect */
+}
+
+.gallery-item a {
+  text-decoration: none !important; /* Remove underline from links */
+  color: inherit !important; /* Inherit text color */
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+
+.gallery-item iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gallery-item:hover {
+  opacity: 0.7; /* Change opacity on hover */
+}
+
+.caption {
+  margin-top: -10px;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start; /* Align caption to the left */
+  text-align: left;
+  width: 100%; /* Ensure the caption takes the full width of the container */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+      grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
+}
+

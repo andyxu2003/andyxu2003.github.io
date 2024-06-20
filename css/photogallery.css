@@ -1,7 +1,3 @@
-body {
-  background-color: #faf0e7;
-}
-
 .image-gallery-container {
   font-family: Arial, sans-serif;
   display: flex;
@@ -23,6 +19,7 @@ body {
   display: none;
   margin-left: auto;
   margin-right: auto;
+  border: 10px solid #E8E8E8
 }
 
 .prev-button,
@@ -52,7 +49,13 @@ body {
   font-size: 36px;
   font-weight: bold;
   padding-top: 4%;
-  padding-bottom: 6%;
+  padding-bottom: 12px;
+}
+
+.date {
+  text-align: center;
+  font-size: 18px;
+  
 }
 
 .fade-scroll {
@@ -133,4 +136,32 @@ body {
     }
   }
 
+  .link-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 10%;
+  }
+  
+  .left-link, .right-link {
+    width: auto; /* Adjust as needed */
+  }
+  
+  .left-link a, .right-link a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .left-link a {
+    text-align: left;
+  }
+
+  .right-link a {
+    text-align: right;
+  }
 
