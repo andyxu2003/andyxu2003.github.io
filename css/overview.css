@@ -24,3 +24,7 @@ img {
     background-color: #4caf50;
     width: 0;
 }
+
+.hidden {
+    display: none;
+}

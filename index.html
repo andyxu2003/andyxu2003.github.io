@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div id="progressBar"></div>
+    <div id="progressBar" class="hidden"></div>
 
     <div id="header"></div>
 
@@ -30,19 +30,29 @@
       <img src="photos/Favorites/Favorites (VT, Med, PR).jpg" alt="Favorites 3">
     </div>
     <div>
-      <img src="photos/Favorites/Favorites (Cape).jpg" alt="Favorites 3">
+      <img src="photos/Favorites/Favorites (Cape).jpg" alt="Favorites 4">
     </div>
 
     <div id="footer"></div>
 
     <script>
-      window.onscroll = function() {updateScrollBar()};
+      window.onscroll = function() {
+        updateScrollBar();
+        showProgressBar();
+      };
 
       function updateScrollBar() {
           var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
           var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
           var scrolled = (winScroll / height) * 100;
           document.getElementById("progressBar").style.width = scrolled + "%";
+      }
+
+      function showProgressBar() {
+          var progressBar = document.getElementById("progressBar");
+          if (progressBar.classList.contains("hidden")) {
+              progressBar.classList.remove("hidden");
+          }
       }
     </script>
 
