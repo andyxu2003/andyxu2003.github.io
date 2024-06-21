@@ -37,78 +37,62 @@ Repeat this HTML with 21 images for 21 <img> lines total, updating the number co
 
 <body>
 
-    <!-- <div id="header"></div> -->
-    <div class="header">
-      <div class="title">
-        <a href="/" class="home">Andy Xu</a>
-      </div>
-      <div class="links">
+    <div id="header"></div>
 
-        <a href="../albums" class="hover">
-          <span class="highlight-overlay"></span>
-          albums
-        </a>
+    <div class="image-gallery-container">
 
-        <a href="../about" class="hover">
-          <span class="highlight-overlay"></span>
-          about
-        </a>
-      </div>
-    </div>
+        <button class="prev-button" onclick="showImage(-1)">
+          <img src="../images/arrow (with bg).png">
+        </button>
 
-    <div class="image-gallery-container ">
-        <button class="prev-button" onclick="showImage(-1)"><</button>
         <div class="image-gallery">
 
-            <img class="image" src="../photos/Iceland/Iceland-1.jpg" alt="Iceland 1"/>
-            <img class="image" src="../photos/Iceland/Iceland-2.jpg" alt="Iceland 2"/>
-            <img class="image" src="../photos/Iceland/Iceland-3.jpg" alt="Iceland 3"/>
-            <img class="image" src="../photos/Iceland/Iceland-4.jpg" alt="Iceland 4"/>
-            <img class="image" src="../photos/Iceland/Iceland-5.jpg" alt="Iceland 5"/>
-            <img class="image" src="../photos/Iceland/Iceland-6.jpg" alt="Iceland 6"/>
-            <img class="image" src="../photos/Iceland/Iceland-7.jpg" alt="Iceland 7"/>
-            <img class="image" src="../photos/Iceland/Iceland-8.jpg" alt="Iceland 8"/>
-            <img class="image" src="../photos/Iceland/Iceland-9.jpg" alt="Iceland 9"/>
-            <img class="image" src="../photos/Iceland/Iceland-10.jpg" alt="Iceland 10"/>
-            <img class="image" src="../photos/Iceland/Iceland-11.jpg" alt="Iceland 11"/>
-            <img class="image" src="../photos/Iceland/Iceland-12.jpg" alt="Iceland 12"/>
-            <img class="image" src="../photos/Iceland/Iceland-13.jpg" alt="Iceland 13"/>
-            <img class="image" src="../photos/Iceland/Iceland-14.jpg" alt="Iceland 14"/>
-            <img class="image" src="../photos/Iceland/Iceland-15.jpg" alt="Iceland 15"/>
-            <img class="image" src="../photos/Iceland/Iceland-16.jpg" alt="Iceland 16"/>
-            <img class="image" src="../photos/Iceland/Iceland-17.jpg" alt="Iceland 17"/>
-            <img class="image" src="../photos/Iceland/Iceland-18.jpg" alt="Iceland 18"/>
-            <img class="image" src="../photos/Iceland/Iceland-19.jpg" alt="Iceland 19"/>
-            <img class="image" src="../photos/Iceland/Iceland-20.jpg" alt="Iceland 20"/>
-            <img class="image" src="../photos/Iceland/Iceland-21.jpg" alt="Iceland 21"/>
-            
+          <img class="image" src="../photos/Iceland/Iceland-1.jpg" alt="Iceland 1"/>
+          <img class="image" src="../photos/Iceland/Iceland-2.jpg" alt="Iceland 2"/>
+          <img class="image" src="../photos/Iceland/Iceland-3.jpg" alt="Iceland 3"/>
+          <img class="image" src="../photos/Iceland/Iceland-4.jpg" alt="Iceland 4"/>
+          <img class="image" src="../photos/Iceland/Iceland-5.jpg" alt="Iceland 5"/>
+          <img class="image" src="../photos/Iceland/Iceland-6.jpg" alt="Iceland 6"/>
+          <img class="image" src="../photos/Iceland/Iceland-7.jpg" alt="Iceland 7"/>
+          <img class="image" src="../photos/Iceland/Iceland-8.jpg" alt="Iceland 8"/>
+          <img class="image" src="../photos/Iceland/Iceland-9.jpg" alt="Iceland 9"/>
+          <img class="image" src="../photos/Iceland/Iceland-10.jpg" alt="Iceland 10"/>
+          <img class="image" src="../photos/Iceland/Iceland-11.jpg" alt="Iceland 11"/>
+          <img class="image" src="../photos/Iceland/Iceland-12.jpg" alt="Iceland 12"/>
+          <img class="image" src="../photos/Iceland/Iceland-13.jpg" alt="Iceland 13"/>
+          <img class="image" src="../photos/Iceland/Iceland-14.jpg" alt="Iceland 14"/>
+          <img class="image" src="../photos/Iceland/Iceland-15.jpg" alt="Iceland 15"/>
+          <img class="image" src="../photos/Iceland/Iceland-16.jpg" alt="Iceland 16"/>
+          <img class="image" src="../photos/Iceland/Iceland-17.jpg" alt="Iceland 17"/>
+          <img class="image" src="../photos/Iceland/Iceland-18.jpg" alt="Iceland 18"/>
+          <img class="image" src="../photos/Iceland/Iceland-19.jpg" alt="Iceland 19"/>
+          <img class="image" src="../photos/Iceland/Iceland-20.jpg" alt="Iceland 20"/>
+          <img class="image" src="../photos/Iceland/Iceland-21.jpg" alt="Iceland 21"/>
+          
         </div>
-        <button class="next-button" onclick="showImage(1)">></button>
+
+        <button class="next-button" onclick="showImage(1)">
+          <img src="../images/arrow (with bg).png">
+        </button>
+
     </div>
 
-    <div class="heading">Iceland <br> <span class="date">May 2024</span></div>
+    <div class="heading">Iceland <br>
+      <span class="date">May 2024</span>
+    </div>
 
     <div class="link-container">
         <div class="left-link">
-          <a href=""></a> 
+          <!-- <img src="../images/arrow (no bg).png"> -->
+          <a href="./"></a> 
         </div>
         <div class="right-link">
-          <a href="./ireland"> Ireland ></a>
+          <a href="./ireland">Ireland</a>
+          <img src="../images/arrow (no bg).png">
         </div>
     </div>
 
-    <!-- <div id="footer"></div> -->
-    <div class="footer-container">
-      <footer>
-        <div class="designed">designed by Andy Xu | Jun 2024</div>
-        <div class="contact">
-          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
-          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
-            >instagram</a
-          >
-        </div>
-      </footer>
-    </div>
+    <div id="footer"></div>
 
     <script src="../javascript/photogallery.js"></script>
 </body>

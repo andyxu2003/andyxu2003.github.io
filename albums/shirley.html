@@ -1,3 +1,22 @@
+<!--
+
+USE FIND AND REPLACE TO CHANGE (USE [])...
+1. ALBUMNAME -> Album Name
+2. DATE -> Date Photos were Taken
+3. FOLDERNAME -> Folder Name of Photos
+4. FILENAME -> File Name Prefix of Photos
+5. NUMPHOTOS -> Number of Photos in Album
+6. LALBUMN -> Name of Album on Left
+7. LALBUMP -> Page Name of Album on Left
+8. RALBUMN -> Name of Album on Right
+9. RALBUMP -> Page Name of Album on Right 
+10. COPY FOLLOWING INTO CHATGPT AND CODE BELOW
+
+<img class="image" src="../photos/Shirley/Shirley-1.jpg" alt="Shirley 1"/>
+Repeat this HTML with 3 images for 3 <img> lines total, updating the number count for both the file name and alt tag
+
+-->
+
 <link rel="stylesheet" href="../css/photogallery.css" />
 <link rel="stylesheet" href="../css/header.css" />
 <link rel="stylesheet" href="../css/footer.css" />
@@ -15,32 +34,43 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="../javascript/header-footer.js"></script>
       </head>
+
 <body>
 
     <div id="header"></div>
 
-    <div class="image-gallery-container ">
-        <button class="prev-button" onclick="showImage(-1)"><</button>
+    <div class="image-gallery-container">
+
+        <button class="prev-button" onclick="showImage(-1)">
+          <img src="../images/arrow (with bg).png">
+        </button>
+
         <div class="image-gallery">
-            <img class="image" src="../photos/Shirley/Shirley-1.jpg" alt="Shirley 1"/>
-            <img class="image" src="../photos/Shirley/Shirley-2.jpg" alt="Shirley 2"/>
-            <img class="image" src="../photos/Shirley/Shirley-3.jpg" alt="Shirley 3"/>            
+
+          <img class="image" src="../photos/Shirley/Shirley-1.jpg" alt="Shirley 1"/>
+          <img class="image" src="../photos/Shirley/Shirley-2.jpg" alt="Shirley 2"/>
+          <img class="image" src="../photos/Shirley/Shirley-3.jpg" alt="Shirley 3"/>
+          
         </div>
-        <button class="next-button" onclick="showImage(1)">></button>
+
+        <button class="next-button" onclick="showImage(1)">
+          <img src="../images/arrow (with bg).png">
+        </button>
+
     </div>
 
-    <div class="heading ">Shirley</div>
-    <div class="date ">Summer 2023</div>
+    <div class="heading">Shirley <br>
+      <span class="date">Summer 2023</span>
+    </div>
 
-    <!-- LINKS TO OTHER ALBUMS -->
     <div class="link-container">
         <div class="left-link">
-          <!-- CHANGE TO ALBUM ON LEFT -->
-          <a href="./cape-cod">< Cape Cod</a> 
+          <img src="../images/arrow (no bg).png">
+          <a href="./cape-cod">Cape Cod</a> 
         </div>
         <div class="right-link">
-          <!-- CHANGE TO ALBUM ON RIGHT -->
-          <a href="./monica"> Monica ></a>
+          <a href="./monica">Monica</a>
+          <img src="../images/arrow (no bg).png">
         </div>
     </div>
 

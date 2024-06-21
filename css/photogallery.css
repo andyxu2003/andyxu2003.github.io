@@ -19,7 +19,6 @@
   display: none;
   margin-left: auto;
   margin-right: auto;
-  border: 10px solid #E8E8E8;
 }
 
 .prev-button,
@@ -33,16 +32,25 @@
     transform: translateY(-50%); */
   z-index: 1;
   margin: 0 10%;
-  color: black !important;
 }
 
 .prev-button {
   left: 0;
+}
 
+.prev-button img {
+  width: 35px;
+  height: 35px;
 }
 
 .next-button {
   right: 0;
+}
+
+.next-button img {
+  width: 35px;
+  height: 35px;
+  transform: scaleX(-1);
 }
 
 .heading {
@@ -77,7 +85,6 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
-      border: 9px solid #e8e8e8;
     }
   }
 
@@ -89,7 +96,6 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
-      border: 8px solid #e8e8e8;
     }
   }
 
@@ -101,7 +107,6 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
-      border: 7px solid #e8e8e8
     }
   }
 
@@ -113,7 +118,6 @@
     display: none;
     margin-left: auto;
     margin-right: auto;
-    border: 6px solid #e8e8e8;
   }
 
   .prev-button {
@@ -129,7 +133,7 @@
   
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .image {
       max-height: 22ch;
       width: auto; 
@@ -137,7 +141,6 @@
       display: none;
       margin-left: auto;
       margin-right: auto;
-      border: 5px solid #e8e8e8;
     }
 
     .prev-button {
@@ -148,7 +151,7 @@
     .next-button {
       right: -30;
     }
-  }
+  } */
 
   /* @media (max-width: 420px) {
     .image {
@@ -164,21 +167,42 @@
   .link-container {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Ensure items are centered vertically */
     padding: 10px;
-    margin: 0 10% 2% 10%;
+    margin: 0 6% 2% 6%;
+
   }
   
   .left-link, .right-link {
     width: auto; /* Adjust as needed */
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .left-link img {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+
+  .right-link img {
+    max-width: 20px;
+    max-height: 20px;
+    transform: scaleX(-1);
   }
   
   .left-link a, .right-link a {
     display: block;
-    padding: 10px;
+    /* padding: 10px; */
     text-decoration: none;
     cursor: pointer;
     font-size: 24px;
     color: black;
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
   }
 
   .left-link a {
