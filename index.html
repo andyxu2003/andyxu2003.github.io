@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/overview.css" />
+<link rel="stylesheet" href="./css/home.css" />
 <link rel="stylesheet" href="./css/header.css" />
 <link rel="stylesheet" href="./css/footer.css" />
 
@@ -21,7 +21,6 @@
     <!-- <div id="header"></div> -->
 
     <div class="header">
-
       <div class="title">
         <a href="/" class="home">Andy Xu</a>
       </div>
@@ -36,53 +35,33 @@
           about
         </a>
       </div>
-      
     </div>
 
     <div class="desktop">
-      <img src="photos/Favorites/Favorites (Iceland).jpg" alt="Favorites 1">
-      <img src="photos/Favorites/Favorites (Ireland).jpg" alt="Favorites 2">
-      <img src="photos/Favorites/Favorites (VT, Med, PR).jpg" alt="Favorites 3">
-      <img src="photos/Favorites/Favorites (Cape).jpg" alt="Favorites 4">
+      <img class="fade-in" src="photos/Favorites/Favorites (Iceland).jpg" alt="Favorites 1">
+      <img class="fade-in" src="photos/Favorites/Favorites (Ireland).jpg" alt="Favorites 2">
+      <img class="fade-in" src="photos/Favorites/Favorites (VT, Med, PR).jpg" alt="Favorites 3">
+      <img class="fade-in" src="photos/Favorites/Favorites (Cape).jpg" alt="Favorites 4">
     </div>
 
     <div class="mobile">
-      <img src="photos/Favorites/Not formatted/12 Iceland.jpg" alt="Iceland">
-      <img src="photos/Favorites/Not formatted/11 Iceland.jpg" alt="Iceland">
-      <img src="photos/Favorites/Not formatted/10 Iceland.jpg" alt="Iceland">
-      <img src="photos/Favorites/Not formatted/09 Ireland.jpg" alt="Ireland">
-      <img src="photos/Favorites/Not formatted/08 Ireland.jpg" alt="Ireland">
-      <img src="photos/Favorites/Not formatted/07 Ireland.jpg" alt="Ireland">
-      <img src="photos/Favorites/Not formatted/06 Ireland.jpg" alt="Ireland">
-      <img src="photos/Favorites/Not formatted/05 VT.jpg" alt="VT">
-      <img src="photos/Favorites/Not formatted/04 VT.jpg" alt="VT">
-      <img src="photos/Favorites/Not formatted/03 Medford.jpg" alt="Medford">
-      <img src="photos/Favorites/Not formatted/02 Puerto Rico.jpg" alt="Puerto Rico">
-      <img src="photos/Favorites/Not formatted/01 Cape Cod.jpg" alt="Cape Cod">
+      <img class="fade-in" src="photos/Favorites/Not formatted/12 Iceland.jpg" alt="Iceland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/11 Iceland.jpg" alt="Iceland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/10 Iceland.jpg" alt="Iceland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/09 Ireland.jpg" alt="Ireland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/08 Ireland.jpg" alt="Ireland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/07 Ireland.jpg" alt="Ireland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/06 Ireland.jpg" alt="Ireland">
+      <img class="fade-in" src="photos/Favorites/Not formatted/05 VT.jpg" alt="VT">
+      <img class="fade-in" src="photos/Favorites/Not formatted/04 VT.jpg" alt="VT">
+      <img class="fade-in" src="photos/Favorites/Not formatted/03 Medford.jpg" alt="Medford">
+      <img class="fade-in" src="photos/Favorites/Not formatted/02 Puerto Rico.jpg" alt="Puerto Rico">
+      <img class="fade-in" src="photos/Favorites/Not formatted/01 Cape Cod.jpg" alt="Cape Cod">
     </div>
 
     <div id="footer"></div>
 
-    <script>
-      window.onscroll = function() {
-        updateScrollBar();
-        showProgressBar();
-      };
-
-      function updateScrollBar() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("progressBar").style.width = scrolled + "%";
-      }
-
-      function showProgressBar() {
-          var progressBar = document.getElementById("progressBar");
-          if (progressBar.classList.contains("hidden")) {
-              progressBar.classList.remove("hidden");
-          }
-      }
-    </script>
+    <script src="javascript/home.js"></script>
 
   </body>
 </html>

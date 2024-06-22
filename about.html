@@ -17,28 +17,36 @@
   <body>
 
     <!-- <div id="header"></div> -->
+
     <div class="header">
+      
       <div class="title">
         <a href="/" class="home">Andy Xu</a>
       </div>
-      <div class="links">
 
+      <div class="links">
         <a href="../albums" class="hover">
           <span class="highlight-overlay"></span>
           albums
         </a>
-
         <a href="../about" class="hover">
           <span class="highlight-overlay"></span>
           about
         </a>
       </div>
+
     </div>
 
     <img src="images/self-photo.png" class="self" id="self" />
     <div class="about-text" id="about-text">
       I discovered film in 2022 and I've been hooked ever since! This is where I'll be documenting my journey with film and photography as well as showing my favorite photos!
+      <br><br>
+      <a class="email" href="mailto:xuandy@live.com">xuandy@live.com</a>
     </div>
+
+    <a class="instagram-icon" id="instagram-icon"href="https://www.instagram.com/andyxuonfilm/" target="_blank">
+      <img src="images/instagram logo.png" alt="instagram logo" style="width: 42px !important; height: 42px !important;">
+    </a>
 
     <!-- <div id="footer"></div> -->
     <div class="footer-container">
@@ -46,13 +54,11 @@
         <div class="designed">designed by Andy Xu | Jun 2024</div>
         <div class="contact">
           <a href="mailto:xuandy@live.com">xuandy@live.com</a>
-          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank"
-            >instagram</a
-          >
+          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank">instagram</a>
         </div>
       </footer>
     </div>
-    </div>
+
   </body>
 
   <script>
@@ -63,12 +69,18 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       // Select the div element
-      const divToFadeIn = document.getElementById("about-text");
+      const divToFadeIn1 = document.getElementById("about-text");
+      const divToFadeIn2 = document.getElementById("instagram-icon");
 
       // Set a timeout to fade in the div after 1 seconds
       setTimeout(function () {
-        divToFadeIn.style.opacity = "1";
-      }, 1000); //
+        divToFadeIn1.style.opacity = "1";
+      }, 1000);
+
+      setTimeout(function () {
+        divToFadeIn2.style.opacity = "1";
+      }, 2000); //
+
     });
   </script>
 </html>
