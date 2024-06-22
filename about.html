@@ -16,26 +16,7 @@
 
   <body>
 
-    <!-- <div id="header"></div> -->
-
-    <div class="header">
-      
-      <div class="title">
-        <a href="/" class="home">Andy Xu</a>
-      </div>
-
-      <div class="links">
-        <a href="../albums" class="hover">
-          <span class="highlight-overlay"></span>
-          albums
-        </a>
-        <a href="../about" class="hover">
-          <span class="highlight-overlay"></span>
-          about
-        </a>
-      </div>
-
-    </div>
+    <div id="header"></div>
 
     <img src="images/self-photo.png" class="self" id="self" />
     <div class="about-text" id="about-text">
@@ -48,39 +29,9 @@
       <img src="images/instagram logo.png" alt="instagram logo" style="width: 42px !important; height: 42px !important;">
     </a>
 
-    <!-- <div id="footer"></div> -->
-    <div class="footer-container">
-      <footer>
-        <div class="designed">designed by Andy Xu | Jun 2024</div>
-        <div class="contact">
-          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
-          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank">instagram</a>
-        </div>
-      </footer>
-    </div>
+    <div id="footer"></div>
 
   </body>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const fadeInDiv = document.getElementById("self");
-      fadeInDiv.classList.add("fade-in");
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Select the div element
-      const divToFadeIn1 = document.getElementById("about-text");
-      const divToFadeIn2 = document.getElementById("instagram-icon");
-
-      // Set a timeout to fade in the div after 1 seconds
-      setTimeout(function () {
-        divToFadeIn1.style.opacity = "1";
-      }, 1000);
-
-      setTimeout(function () {
-        divToFadeIn2.style.opacity = "1";
-      }, 2000); //
-
-    });
-  </script>
+  <script src="javascript/about.js"></script>
 </html>
