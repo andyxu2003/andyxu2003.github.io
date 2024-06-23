@@ -39,7 +39,7 @@ body {
   margin: auto;
   opacity: 0; /* Start with an invisible div */
   transition: opacity 1s ease-in-out; /* Smooth opacity transition */
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .instagram-icon img {
@@ -80,7 +80,7 @@ body {
   .self {
     max-width: 80%;
     height: auto;
-    margin-top: 2%;
+    margin-top: 4%;
   }
 
   .about-text {
