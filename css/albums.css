@@ -42,7 +42,7 @@
 }
 
 .caption {
-  margin-top: -5px;
+  /* margin-top: -5px; */
   font-size: 20px;
   align-self: flex-start; /* Align caption to the left */
   text-align: left;
