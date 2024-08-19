@@ -11,8 +11,8 @@ USE FIND AND REPLACE TO CHANGE (USE [])...
 8. RALBUMP -> Page Name of Album on Right 
 9. COPY FOLLOWING INTO CHATGPT AND CODE BELOW
 
-<img class="image" src="../album photos/[FOLDERNAME]/[ALBUMNAME] 01.jpg" alt="[ALBUMNAME] 1"/>
-Repeat this HTML with [NUMPHOTOS] images for [NUMPHOTOS] <img> lines total, updating the number count for both the file name and alt tag
+<img class="image" src="../album photos/03 Cape Cod/Cape Cod 01.jpg" alt="Cape Cod 1"/>
+Repeat this HTML with 4 images for 4 <img> lines total, updating the number count for both the file name and alt tag
 
 -->
 
@@ -23,7 +23,7 @@ Repeat this HTML with [NUMPHOTOS] images for [NUMPHOTOS] <img> lines total, upda
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>[ALBUMNAME]</title>
+        <title>Cape Cod</title>
         <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
         <meta
           name="viewport"
@@ -46,7 +46,11 @@ Repeat this HTML with [NUMPHOTOS] images for [NUMPHOTOS] <img> lines total, upda
 
         <div class="image-gallery">
 
- <!-- REPLACE WITH CHATGPT CODE HERE -->
+          <img class="image" src="../album photos/03 Cape Cod/Cape Cod 01.jpg" alt="Cape Cod 1"/>
+          <img class="image" src="../album photos/03 Cape Cod/Cape Cod 02.jpg" alt="Cape Cod 2"/>
+          <img class="image" src="../album photos/03 Cape Cod/Cape Cod 03.jpg" alt="Cape Cod 3"/>
+          <img class="image" src="../album photos/03 Cape Cod/Cape Cod 04.jpg" alt="Cape Cod 4"/>
+          
         </div>
 
         <button class="next-button" onclick="showImage(1)">
@@ -55,17 +59,17 @@ Repeat this HTML with [NUMPHOTOS] images for [NUMPHOTOS] <img> lines total, upda
 
     </div>
 
-    <div class="heading">[ALBUMNAME]<br>
-      <span class="date">[DATE]</span>
+    <div class="heading">Cape Cod<br>
+      <span class="date">October 2023</span>
     </div>
 
     <div class="link-container">
         <div class="left-link">
           <img src="../images/icons/arrow (no bg).png">
-          <a href="./[LALBUMP]">[LALBUMN]</a> 
+          <a href="./vermont-eclipse">Vermont (Solar Eclipse)</a> 
         </div>
         <div class="right-link">
-          <a href="./[RALBUMP]">[RALBUMN]</a>
+          <a href="./shirley">Shirley</a>
           <img src="../images/icons/arrow (no bg).png">
         </div>
     </div>
