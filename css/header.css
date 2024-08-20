@@ -7,7 +7,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* Playfair Display Font */
   font-family: "Playfair Display", serif;
   text-decoration: none;
   height: 100%;
@@ -17,7 +16,6 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 40px;
   margin: 15px 8% 0 8%;
 }
@@ -62,26 +60,22 @@ body {
   transform-origin: bottom left;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    justify-content: space-around !important;
   }
 
-  .header h1 {
+  .title {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .links {
-    margin-top: 10px;
+    flex-direction: row;
     justify-content: center;
+    gap: 15px; /* Adjust spacing between links for mobile */
   }
-
-  .links a {
-    font-size: 16px;
-    margin-right: 10px;
-  }
-} */
+}
 
