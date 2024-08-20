@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+h2 {
+    font-weight: normal !important;
+}
+
+.video-container {
+    display: flex;
+    margin: auto;
+    gap: 50px;
+}
+
+iframe {
+    width: 640px;
+    height: 360px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    iframe {
+        width: 356px;
+        height: 200px;
+    }
+}
