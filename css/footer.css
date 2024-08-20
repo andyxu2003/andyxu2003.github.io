@@ -6,11 +6,11 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
 }
 
-body > div {
-  flex: 1; /* Allow the content to grow and push the footer to the bottom */
+.video-container {
+  flex: 1; /* This allows the video-container to grow and push the footer to the bottom */
 }
 
 footer {
@@ -29,7 +29,6 @@ footer {
   text-decoration: none;
   font-style: italic;
   color: black;
-  
 }
 
 .contact {
@@ -44,28 +43,28 @@ footer {
 }
 
 .contact a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    footer {
-      flex-direction: column;
-      align-items: center;
-      height: auto;
-      padding: 20px 0;
-    }
-  
-    .contact {
-      margin-top: 10px;
-      justify-content: center;
-    }
-  
-    .contact a {
-      margin-right: 10px;
-      font-size: 14px;
-    }
-  
-    .designed {
-      margin-top: 10px;
-    }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
   }
+
+  .contact {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .contact a {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .designed {
+    margin-top: 10px;
+  }
+}
