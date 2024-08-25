@@ -32,6 +32,13 @@ Repeat this HTML with 7 images for 7 <img> lines total, updating the number coun
         />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="../javascript/header-footer.js"></script>
+        <style>
+          @media (max-width: 768px) {
+            #footer {
+              display: none;
+            }
+          }
+        </style>
       </head>
 
 <body>
@@ -76,6 +83,8 @@ Repeat this HTML with 7 images for 7 <img> lines total, updating the number coun
           <img src="../images/icons/arrow (no bg).png">
         </div>
     </div>
+
+    <div id="footer"></div>
 
     <script src="../javascript/photogallery.js"></script>
 </body>
