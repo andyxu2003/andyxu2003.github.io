@@ -6,11 +6,11 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+  min-height: 100vh; 
 }
 
 .video-container {
-  flex: 1; /* This allows the video-container to grow and push the footer to the bottom */
+  flex: 1; 
 }
 
 footer {
@@ -21,7 +21,7 @@ footer {
   margin: 0 8%;
   font-size: 16px;
   border-top: 2px solid black;
-  flex-shrink: 0; /* Prevent the footer from shrinking */
+  flex-shrink: 0;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -68,3 +68,5 @@ footer {
     margin-top: 10px;
   }
 }
+
+
