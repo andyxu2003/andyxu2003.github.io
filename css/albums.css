@@ -2,28 +2,28 @@
     margin: 40px;
 }
 
-/* Image Gallery */
-
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
-  gap: 30px; /* Increased gap to 20px */
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 12px; 
+  column-gap: 50px; 
 }
 
 .gallery-item {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  text-decoration: none !important; /* Remove underline from links */
-  color: inherit; /* Inherit text color */
-  transition: opacity 0.3s ease; /* Add transition for hover effect */
+  /* flex-direction: column;
+  align-items: center; */
+  /* padding: 10px; */
+  text-decoration: none !important; 
+  transition: opacity 0.3s ease; 
+  position: relative;
+  text-align: center;
 }
 
 .gallery-item a {
-  text-decoration: none !important; /* Remove underline from links */
-  color: inherit !important; /* Inherit text color */
+  text-decoration: none !important; 
+  color: inherit !important; 
 }
 
 .gallery-item img {
@@ -38,18 +38,33 @@
 }
 
 .gallery-item:hover {
-  opacity: 0.7; /* Change opacity on hover */
+  opacity: 0.9; 
 }
 
-.caption {
-  /* margin-top: -5px; */
+.gallery-item:hover .centered {
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+}
+
+/* .caption {
+  margin-top: -5px;
   font-size: 20px;
-  align-self: flex-start; /* Align caption to the left */
+  align-self: flex-start; 
   text-align: left;
-  width: 100%; /* Ensure the caption takes the full width of the container */
+  width: 100%;
+} */
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
 }
 
 /* Responsive Design */
+
 @media (max-width: 1024px) {
   .gallery {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
