@@ -40,10 +40,16 @@ img {
   display: none;
 }
 
+/* Media Query for Mobile */
 @media (max-width: 768px) {
 
+  .toggle-container {
+    margin: 0 auto !important;
+    padding-top: 20px;
+  }
+
   .desktop {
-    display: none;
+    display: none !important;
   }
 
   .mobile {
@@ -51,6 +57,25 @@ img {
     margin-top: 40px;
   }
 
+  /* Hide slideshow by default on mobile view */
+  #slideshow {
+    display: none;
+  }
+
+  /* Show slideshow when toggle is checked */
+  .toggle-on #slideshow {
+    display: block;
+  }
+
+  /* Hide mobile when toggle is checked */
+  .toggle-on .mobile {
+    display: none;
+  }
+
+  /* Show mobile when toggle is unchecked */
+  .toggle-off .mobile {
+    display: block;
+  }
 }
 
 .mobile img {
@@ -62,40 +87,61 @@ img {
     margin-bottom: 40px;
 }
 
-/* Dropdown container */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+/* TOGGLE SWITCH */
+
+/* Container for the toggle switch */
+.toggle-container {
+  display: flex;
+  margin-left: 78%;
+  margin-top: 20px;
+  gap: 8px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
+/* Hide the default checkbox */
+.toggle-switch {
   display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+/* The visible part of the switch (the slider) */
+.switch-label {
+  width: 55px; /* Updated width */
+  height: 22px; /* Updated height */
+  border-radius: 22px; /* Adjusted to match height */
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid black; /* Black border */
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+/* The circle inside the switch */
+.switch-label::after {
+  content: "";
+  position: absolute;
+  width: 18px; /* Circle width */
+  height: 18px; /* Circle height */
+  background-color: black; /* Black circle */
+  border-radius: 50%; /* Make it a perfect circle */
+  top: 50%; /* Position at the vertical center */
+  left: 2px; /* Adjust horizontal position */
+  transform: translateY(-50%); /* Center the circle vertically */
+  transition: transform 0.3s ease;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+/* Move the circle to the right when the switch is toggled */
+.toggle-switch:checked + .switch-label::after {
+  transform: translateX(31px) translateY(-50%); /* Move right and keep centered vertically */
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+
+/* Content visibility styling */
+
+.content-hidden {
+  display: none;
+}
+
+.content-visible {
+  display: block;
+}
 

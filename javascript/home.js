@@ -49,3 +49,39 @@ fadeImages.forEach(image => {
     observer.observe(image);
 });
 
+document.getElementById('toggle-switch').addEventListener('change', function() {
+    var body = document.body;
+    var contentA = document.getElementById('gallery');
+    var contentB = document.getElementById('slideshow');
+
+    if (this.checked) {
+      contentA.classList.remove('content-visible');
+      contentA.classList.add('content-hidden');
+      contentB.classList.remove('content-hidden');
+      contentB.classList.add('content-visible');
+    } else {
+      contentA.classList.remove('content-hidden');
+      contentA.classList.add('content-visible');
+      contentB.classList.remove('content-visible');
+      contentB.classList.add('content-hidden');
+    }
+
+    if (window.innerWidth <= 768) {  // Ensure this only applies in mobile view
+        if (this.checked) {
+            body.classList.add('toggle-on');
+            body.classList.remove('toggle-off');
+            contentA.classList.remove('content-visible');
+            contentA.classList.add('content-hidden');
+            contentB.classList.remove('content-hidden');
+            contentB.classList.add('content-visible');
+        } else {
+            body.classList.add('toggle-off');
+            body.classList.remove('toggle-on');
+            contentA.classList.remove('content-hidden');
+            contentA.classList.add('content-visible');
+            contentB.classList.remove('content-visible');
+            contentB.classList.add('content-hidden');
+        }
+    }
+  });
+
