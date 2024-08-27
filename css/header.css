@@ -56,20 +56,15 @@ body {
   position: relative;
 }
 
-/* .links a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-} */
-
 .links a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.45px;
+  text-underline-offset: 5px;
+}
+
+#albums,
+#videography,
+#about {
   text-decoration-line: underline;
   text-decoration-thickness: 1.45px;
   text-underline-offset: 5px;
