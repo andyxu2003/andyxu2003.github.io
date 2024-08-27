@@ -1,18 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
-body {
+/* Ensure the html and body take up the full height of the viewport */
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+/* Flex container for the entire page */
+body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh; /* Ensures the body takes up the full height of the viewport */
 }
 
-.video-container {
-  flex: 1; 
+/* Main content should expand to fill available space */
+.content {
+  flex: 1;
 }
 
+/* Footer container to push footer to the bottom */
+.footer-container {
+  margin-top: auto;
+}
+
+/* Footer styling */
 footer {
   display: flex;
   justify-content: space-between;
@@ -46,6 +59,7 @@ footer {
   text-decoration: underline;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   footer {
     flex-direction: column;

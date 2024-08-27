@@ -20,13 +20,35 @@
 
     <div id="progressBar" class="hidden"></div>
 
-    <div id="home-header"></div>
+    <!-- <div id="home-header"></div> -->
+    <div class="header">
+      
+      <div class="title-container">
+        <div>
+          <img class="icon" src="../images/icons/favicon.png"/>
+        </div>
+        <div>
+          <a href="/" class="title-name">Andy Xu</a>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="../albums" class="hover">albums</a>
+        <a href="../videography" class="hover">videography</a>
+        <a href="../about" class="hover">about</a>
+      </div>
+
+    </div>
+
+    <!-- TOGGLE TO SLIDESHOW VIEW -->
 
     <div class="toggle-container">
       <div>slideshow view</div>
       <input type="checkbox" id="toggle-switch" class="toggle-switch">
       <label for="toggle-switch" class="switch-label"></label>
     </div>
+
+    <!-- DESKTOP VIEW -->
 
     <div class="desktop content-visible" id="gallery">
       <img class="fade-in" src="images/favorites/06 Favorites (A Summer in Massachusetts).jpg" alt="Favorites (A Summer in Massachusetts)">
@@ -37,7 +59,7 @@
       <img class="fade-in" src="images/favorites/01 Favorites (Cape Cod).jpg" alt="Favorites (Cape Cod)">
     </div>
 
-    <!-- IMAGE GALLERY -->
+    <!-- IMAGE SLIDESHOW -->
 
     <div div class="content-hidden" id="slideshow">
 
@@ -77,7 +99,7 @@
 
     </div>
 
-    <!--  -->
+    <!-- MOBILE VIEW -->
 
     <div class="mobile" id="gallery">
       <img class="fade-in" src="images/favorites/mobile format/17 A Summer in Massachusetts.jpg" alt="A Summer in Massachusetts 3">
@@ -99,7 +121,15 @@
       <img class="fade-in" src="images/favorites/mobile format/01 Cape Cod.jpg" alt="Cape Cod">
     </div>
 
-    <div id="footer"></div>
+    <div class="footer-container">
+      <footer>
+        <div class="designed">designed by Andy Xu | Jun 2024</div>
+        <div class="contact">
+          <a href="mailto:xuandy@live.com">xuandy@live.com</a>
+          <a href="https://www.instagram.com/andyxuonfilm/" target="_blank">instagram</a>
+        </div>
+      </footer>
+    </div>
 
     <script src="javascript/home.js"></script>
     <script src="javascript/photogallery.js"></script>
