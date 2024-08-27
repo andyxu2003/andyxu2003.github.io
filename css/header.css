@@ -3,7 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-
 body {
   margin: 0;
   padding: 0;
@@ -20,13 +19,27 @@ body {
   margin: 15px 8% 0 8%;
 }
 
-.home {
-  text-decoration: none;
-  color: black;
+.title-container {
+  font-size: 28px;
+  display: flex;
+  align-items: center; /* Align items vertically */
 }
 
-.title {
-  font-size: 28px;
+.title-container div {
+  display: flex;
+  align-items: center; /* Ensure icon and title are vertically aligned */
+  margin-right: 10px; /* Add some spacing between icon and title-name */
+}
+
+.icon {
+  height: 40px; /* Adjust the height to fit within the header */
+  width: auto;  /* Ensure the icon maintains its aspect ratio */
+}
+
+.title-name {
+  text-decoration: none;
+  color: black;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .links {
