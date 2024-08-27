@@ -3,15 +3,23 @@ body {
     min-height: 100vh;
 }
 
-h2 {
-    font-weight: normal !important;
+.container {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .video-container {
     display: flex;
-    margin: auto;
-    gap: 80px;
-    margin-top: 150px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12%;
+}
+
+.video-title {
+    font-weight: normal !important;
+    font-size: 32px;
 }
 
 iframe {

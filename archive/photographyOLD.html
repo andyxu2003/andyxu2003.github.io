@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./css/photographyOLD.css" />
+<link rel="stylesheet" href="/archive/photographyOLD.css" />
 <link rel="stylesheet" href="./css/header.css" />
 <link rel="stylesheet" href="./css/footer.css" />
 
@@ -13,6 +13,94 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="javascript/header-footer.js"></script>
+    <style>
+      body {
+          background-color: #faf0e7;
+        }
+
+      .container {
+        margin: 5% 14%;
+      }
+
+      .gallery-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12%;
+      }
+
+      .image,
+      .text {
+        transition: transform 0.3s ease;
+      }
+
+      .image:hover,
+      .text:hover {
+        transform: translateY(-10px);
+      }
+
+      img {
+        max-height: 275px;
+        width: auto;
+      }
+
+      .no-decoration {
+        color: black;
+        text-decoration: none;
+      }
+
+      .gallery-title {
+        font-size: 48px;
+        font-weight: bold;
+        background: linear-gradient(to top, #adba97 50%, transparent 50%);
+      }
+
+      .year,
+      .info {
+        font-size: 20px;
+      }
+
+      .fade-scroll {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .fade-scroll.faded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 950px) {
+
+          .container {
+              margin: 3% 8%;
+          }
+
+          .gallery-container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              margin-bottom: 12%;
+            }
+
+          .text {
+              text-align: center;
+              padding-bottom: 20px;
+          }
+
+          img {
+              max-width: 95%;
+              height: auto;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              
+            }
+
+      }
+    </style>
   </head>
 
   <body>
