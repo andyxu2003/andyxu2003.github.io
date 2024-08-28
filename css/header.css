@@ -86,6 +86,7 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 15px; /* Adjust spacing between links for mobile */
+    margin-top: 20px;
   }
 }
 
