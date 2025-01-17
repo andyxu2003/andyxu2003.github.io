@@ -133,8 +133,6 @@ img {
   transform: translateX(31px) translateY(-50%); /* Move right and keep centered vertically */
 }
 
-
-
 /* Content visibility styling */
 
 .content-hidden {
@@ -143,5 +141,9 @@ img {
 
 .content-visible {
   display: block;
+}
+
+.space {
+  height: 2rem;
 }
 
