@@ -100,3 +100,7 @@ img {
 .space {
   height: 4rem;
 }
+
+video {
+  border-radius: 1rem; /* round the corners */
+}
