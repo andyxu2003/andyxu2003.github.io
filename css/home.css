@@ -10,6 +10,16 @@ img {
   margin-right: auto;
 }
 
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  max-width: 900px;      /* adjust to taste */
+  margin: 0 auto;       /* centers the column */
+  justify-items: center; /* ⬅️ this is the key */
+  margin: 6rem auto;
+}
+
 #progressBar {
   position: fixed;
   top: 0;
@@ -31,69 +41,13 @@ img {
   display: none;
 }
 
-.desktop {
-  display: block;
-  margin-top: 40px;
-}
-
-.mobile {
-  display: none;
-}
-
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-
-  .toggle-container {
-    margin: 0 auto !important;
-    padding-top: 20px;
-  }
-
-  .desktop {
-    display: none !important;
-  }
-
-  .mobile {
-    display: block;
-    margin-top: 40px;
-  }
-
-  /* Hide slideshow by default on mobile view */
-  #slideshow {
-    display: none;
-  }
-
-  /* Show slideshow when toggle is checked */
-  .toggle-on #slideshow {
-    display: block;
-  }
-
-  /* Hide mobile when toggle is checked */
-  .toggle-on .mobile {
-    display: none;
-  }
-
-  /* Show mobile when toggle is unchecked */
-  .toggle-off .mobile {
-    display: block;
-  }
-}
-
-.mobile img {
-    max-width: 360px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-}
-
 /* TOGGLE SWITCH */
 
 /* Container for the toggle switch */
 .toggle-container {
   display: flex;
   margin-left: 78%;
-  margin-top: 20px;
+  margin-top: 2rem;
   gap: 8px;
 }
 
@@ -146,4 +100,3 @@ img {
 .space {
   height: 4rem;
 }
-

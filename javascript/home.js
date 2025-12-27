@@ -85,3 +85,21 @@ document.getElementById('toggle-switch').addEventListener('change', function() {
     }
   });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("toggle-switch");
+  const gallery = document.getElementById("gallery");
+  const slideshow = document.getElementById("slideshow");
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      gallery.style.display = "none";
+      slideshow.classList.remove("content-hidden");
+      slideshow.classList.add("content-visible");
+    } else {
+      gallery.style.display = "grid";
+      slideshow.classList.remove("content-visible");
+      slideshow.classList.add("content-hidden");
+    }
+  });
+});
+

@@ -1,0 +1,46 @@
+.page-container {
+  margin: 10rem auto 5rem auto; /* move lower on page and reduce bottom space */
+  max-width: 90%;
+}
+
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.video-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.7s cubic-bezier(0.15, 0.9, 0.1, 1);
+  aspect-ratio: 4 / 3; /* enforce 4:3 aspect ratio */
+  border-radius: 1rem; /* round the corners */
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+}
+
+.video-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover; /* ensures video fills 4:3 container */
+  border-radius: 1rem; /* match container corners */
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+}
