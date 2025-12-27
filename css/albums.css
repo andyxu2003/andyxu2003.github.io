@@ -59,3 +59,7 @@
   text-align: center;
 }  */
 
+video {
+  border-radius: 1rem !important;
+}
+
