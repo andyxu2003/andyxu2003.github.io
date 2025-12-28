@@ -94,19 +94,32 @@ body {
 
 .back-button-container {
   margin-top: 5rem;
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 1rem auto;
 }
 
 button {
   width: 10rem;
   font-size: 1.5rem;
   font-family: "Playfair Display", serif !important;
+
   background-color: white;
   border: none;
   cursor: pointer;
-  transition-duration: .3s;
+
+  color: black;                 /* 👈 force text color */
+  -webkit-appearance: none;     /* 👈 remove iOS styling */
+  appearance: none;
+
+  transition-duration: 0.3s;
 }
 
 button:hover {
   opacity: .3;
+}
+
+button:visited,
+button:focus,
+button:active {
+  color: black;
+  outline: none;
 }
