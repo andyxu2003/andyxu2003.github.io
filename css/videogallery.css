@@ -40,11 +40,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  width: 100%;        /* 👈 make it span full parent width */
   font-size: 2rem;
   color: white;
 
-  text-align: center;     /* centers multi-line text */
-  max-width: 80%;         /* allows wrapping while staying centered */
+  text-align: center; /* centers multi-line text */
   line-height: 1.3;
 
   pointer-events: none;
