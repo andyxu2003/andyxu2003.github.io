@@ -21,6 +21,7 @@
   position: relative;
   text-align: center;
   transition: transform .7s cubic-bezier(0.15, 0.9, 0.1, 1);
+  padding: 0 1rem;
 }
 
 .gallery-item:hover {

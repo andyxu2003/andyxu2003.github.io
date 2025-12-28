@@ -3,42 +3,47 @@
 <link rel="stylesheet" href="/css/footer.css" />
 
 <html>
+  <head>
+    <title>Postcards</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/video icon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      charset="UTF-8"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/javascript/header-footer-video.js"></script>
+  </head>
 
-<head>
-  <title>Travel</title>
-  <link rel="icon" type="image/x-icon" href="/images/icons/video icon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    charset="UTF-8" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="/javascript/header-footer-video.js"></script>
-</head>
+  <body>
+    <div id="header"></div>
 
-<body>
+    <div class="page-container">
+      <div class="video-gallery">
+        <a href="/video/postcards/alaska.html" class="video-item">
+          <video
+            src="https://github.com/andyxu2003/andyxu2003.github.io/raw/refs/heads/main/videos/postcards/alaska/Alaska%20Postcard%201.mp4"
+            muted
+            loop
+            preload="metadata"
+          ></video>
+          <div class="centered">A Week in the Arctic</div>
+        </a>
 
-  <div id="header"></div>
-
-  <div class="page-container">
-
-    <div class="video-gallery">
-
-      <a href="/video/postcards/alaska.html" class="video-item">
-        <video src="https://github.com/andyxu2003/andyxu2003.github.io/raw/refs/heads/main/videos/postcards/alaska/Alaska%20Postcard%201.mp4" muted loop preload="metadata"></video>
-        <div class="centered">A Week in the Arctic</div>
-      </a>
-
-      <a href="/video/postcards/japan.html" class="video-item">
-        <video src="https://github.com/andyxu2003/andyxu2003.github.io/raw/refs/heads/main/videos/postcards/japan/Japan%20Postcard%201.mp4" muted loop preload="metadata"></video>
-        <div class="centered">Moments from Japan</div>
-      </a>
-
+        <a href="/video/postcards/japan.html" class="video-item">
+          <video
+            src="https://github.com/andyxu2003/andyxu2003.github.io/raw/refs/heads/main/videos/postcards/japan/Japan%20Postcard%201.mp4"
+            muted
+            loop
+            preload="metadata"
+          ></video>
+          <div class="centered">Moments from Japan</div>
+        </a>
+      </div>
     </div>
 
+    <script src="/javascript/videogallery.js"></script>
 
-  </div>
-
-  <script src="/javascript/videogallery.js"></script>
-
-  <div id="footer"></div>
-</body>
-
+    <div id="footer"></div>
+  </body>
 </html>

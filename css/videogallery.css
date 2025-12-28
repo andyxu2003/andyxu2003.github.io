@@ -18,8 +18,8 @@
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.7s cubic-bezier(0.15, 0.9, 0.1, 1);
+  border-radius: 1rem;
   aspect-ratio: 4 / 3; /* enforce 4:3 aspect ratio */
-  border-radius: 1rem; /* round the corners */
 }
 
 .video-item:hover {
@@ -30,8 +30,8 @@
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover; /* ensures video fills 4:3 container */
-  border-radius: 1rem; /* match container corners */
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 .centered {

@@ -22,69 +22,89 @@ Repeat this HTML with 16 images for 16 <img> lines total, updating the number co
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Ireland</title>
-        <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-          charset="UTF-8"
-        />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="../javascript/header-footer-photo.js"></script>
-        <style>
-          @media (max-width: 768px) {
-            #footer {
-              display: none;
-            }
-          }
-        </style>
-      </head>
+  <head>
+    <title>Ireland</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      charset="UTF-8"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../javascript/header-footer-photo.js"></script>
+    <style>
+      @media (max-width: 768px) {
+        #footer {
+          display: none;
+        }
+      }
+    </style>
+  </head>
 
-<body>
-
+  <body>
     <div id="header"></div>
 
     <div class="image-gallery-container">
+      <button class="prev-button" onclick="showImage(-1)">
+        <img src="../images/icons/arrow (with bg).png" />
+      </button>
 
-        <button class="prev-button" onclick="showImage(-1)">
-          <img src="../images/icons/arrow (with bg).png">
-        </button>
+      <div class="image-gallery">
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-01.jpg"
+          alt="Ireland 1"
+        />
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-02.jpg"
+          alt="Ireland 2"
+        />
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-03.jpg"
+          alt="Ireland 3"
+        />
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-04.jpg"
+          alt="Ireland 4"
+        />
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-05.jpg"
+          alt="Ireland 5"
+        />
+        <img
+          class="image"
+          src="../album photos/travel/Ireland/ireland-06.jpg"
+          alt="Ireland 6"
+        />
+      </div>
 
-        <div class="image-gallery">
-
-          <img class="image" src="../album photos/travel/Ireland/ireland-01.jpg" alt="Ireland 1"/>
-          <img class="image" src="../album photos/travel/Ireland/ireland-02.jpg" alt="Ireland 2"/>
-          <img class="image" src="../album photos/travel/Ireland/ireland-03.jpg" alt="Ireland 3"/>
-          <img class="image" src="../album photos/travel/Ireland/ireland-04.jpg" alt="Ireland 4"/>
-          <img class="image" src="../album photos/travel/Ireland/ireland-05.jpg" alt="Ireland 5"/>
-          <img class="image" src="../album photos/travel/Ireland/ireland-06.jpg" alt="Ireland 6"/>      
-          
-        </div>
-
-        <button class="next-button" onclick="showImage(1)">
-          <img src="../images/icons/arrow (with bg).png">
-        </button>
-
+      <button class="next-button" onclick="showImage(1)">
+        <img src="../images/icons/arrow (with bg).png" />
+      </button>
     </div>
 
-    <div class="heading">Ireland<br>
+    <div class="heading">
+      Ireland<br />
       <span class="date">May 2024</span>
     </div>
 
     <div class="link-container">
-        <div class="left-link">
-          <img src="../images/icons/arrow (no bg).png">
-          <a href="./iceland">Iceland</a> 
-        </div>
-        <div class="right-link">
-          <!-- <a href="./vermont-eclipse">Vermont (Solar Eclipse)</a>
+      <div class="left-link">
+        <img src="../images/icons/arrow (no bg).png" />
+        <a href="./iceland">Iceland</a>
+      </div>
+      <div class="right-link">
+        <!-- <a href="./vermont-eclipse">Vermont (Solar Eclipse)</a>
           <img src="../images/icons/arrow (no bg).png"> -->
-        </div>
+      </div>
     </div>
 
     <div id="footer"></div>
 
     <script src="../javascript/photogallery.js"></script>
-</body>
+  </body>
 </html>
