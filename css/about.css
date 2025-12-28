@@ -106,7 +106,7 @@ button {
   border: none;
   cursor: pointer;
 
-  color: black;                 /* 👈 force text color */
+  color: black !important;                 /* 👈 force text color */
   -webkit-appearance: none;     /* 👈 remove iOS styling */
   appearance: none;
 
